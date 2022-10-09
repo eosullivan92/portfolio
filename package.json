@@ -12,7 +12,8 @@
     "client:watch": "npm run webpack -- --watch",
     "server:watch": "nodemon server",
     "test": "jest --watch --noStackTrace",
-    "lint": "eslint --ext .js,.jsx ."
+    "lint": "eslint --ext .js,.jsx .",
+    "sass": "sass ./client/SASS/main.sass ./server/public/output.css"
   },
   "babel": {
     "presets": [

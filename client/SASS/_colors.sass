@@ -1,0 +1,11 @@
+$primary-dark: #222222
+$secondary-dark: #3B3B3B
+$primary-light: #F7F7F7
+$secondary-light: #E1E1E1
+
+$scheme-default: $primary-light, $primary-dark
+$scheme-secondary: $primary-dark, $primary-light
+
+@mixin color-scheme($bg, $text)
+    background: $bg
+    color: $text

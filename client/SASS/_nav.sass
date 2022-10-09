@@ -1,0 +1,38 @@
+@use 'colors'
+    
+nav 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 1em
+    position: fixed
+    top: 0
+    width: 100%
+    padding-right: 20em
+
+
+    ul
+        display: flex
+        flex-direction: row
+        gap: 1em
+
+
+    li
+        list-style: none
+        position: relative
+
+
+    li::after 
+        content: ''
+        position: absolute
+        bottom: 0
+        display: block
+        height: 2px
+        background: colors.$primary-dark
+        transition: width 0.3s ease 0s, left 0.3s ease 0s
+        width: 0
+
+
+    li:hover:after 
+        width: 100%
+        left: 0

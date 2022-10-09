@@ -1,0 +1,35 @@
+@use 'colors'
+@use 'layout'
+
+.hero-container 
+    height: 100vh
+    width: 100%
+    display: flex
+    flex-direction: row
+    
+    .hero-content 
+        height: 100%
+        width: 60%
+        @include layout.flex-column-start()
+
+        .social-container
+            display: flex
+            
+            .social-item
+                display: flex
+
+                img
+                    height: 32px
+                    width: auto
+
+    .hero-image 
+        height: 100%
+        width: 40%
+        @include layout.flex-column-center()
+        
+        img 
+            width: 350px
+            height: 350px
+            border-radius: 50%
+            object-fit: cover
+            

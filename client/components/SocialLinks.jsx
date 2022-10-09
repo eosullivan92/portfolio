@@ -4,27 +4,27 @@ export default function SocialLinks() {
   return (
     <>
       <div className="social-container">
-        <div className="social-item">
-          <a
-            href="https://www.linkedin.com/in/eosullivan9/"
-            target="_blank"
-            rel="noreferrer"
-          >
+        <a
+          href="https://www.linkedin.com/in/eosullivan9/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="social-item">
             <img src="/linkedin.png" alt="linkedin" />
-            <p className="url">https://www.linkedin.com/in/eosullivan9/</p>
-          </a>
-        </div>
+            <p className="url">eosullivan9</p>
+          </div>
+        </a>
 
-        <div className="social-item">
-          <a
-            href="https://www.linkedin.com/in/eosullivan9/"
-            target="_blank"
-            rel="noreferrer"
-          >
+        <a
+          href="https://www.linkedin.com/in/eosullivan9/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="social-item">
             <img src="/github.png" alt="github" />
-            <p className="url">https://github.com/eosullivan92/portfolio</p>
-          </a>
-        </div>
+            <p className="url">esosullivan92</p>
+          </div>
+        </a>
       </div>
     </>
   )

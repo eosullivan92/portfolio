@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <>
       <nav className="navbar">
-        <h2 className="nav-header">Eamonn O&apos;Sullivan</h2>
+        <h2 className="nav-header">EO</h2>
         <ul className="nav-items">
           <li className="nav-item">About</li>
           <li className="nav-item">Projects</li>
