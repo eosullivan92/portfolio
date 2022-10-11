@@ -1,5 +1,6 @@
 @use 'colors'
 @use 'layout'
+@use 'typography'
 
 .hero-container 
     height: 100vh
@@ -12,11 +13,33 @@
         width: 60%
         @include layout.flex-column-start()
 
+        .title 
+            font: 100% typography.$font-hero
+            color: colors.$secondary-dark
+            font-weight: 800
+            font-size: 48px
+            letter-spacing: 2px
+
+        .about 
+            width: 85%
+            padding: 1em 0
+            color: colors.$tertiary-dark
+        
+        .subtitle 
+            color: colors.$tertiary-dark
+
         .social-container
             display: flex
+            gap: 2em
+
+            a 
+                text-decoration: none
+                // color: colors.$primary-dark
+                color: #A368FC
             
             .social-item
                 display: flex
+                gap: 10px
 
                 img
                     height: 32px

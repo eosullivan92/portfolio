@@ -1,4 +1,4 @@
-$font-stack: 'Poppins', sans-serif
+@use 'typography'
 @use 'colors'
 
 * 
@@ -8,5 +8,5 @@ $font-stack: 'Poppins', sans-serif
 
 body 
   @include colors.color-scheme(colors.$scheme-default ...)
-  font: 100% $font-stack
+  font: 100% typography.$font-main
   margin: 0 10em

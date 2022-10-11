@@ -11,7 +11,7 @@ export default function SocialLinks() {
         >
           <div className="social-item">
             <img src="/linkedin.png" alt="linkedin" />
-            <p className="url">eosullivan9</p>
+            <p className="url">linkedin/eosullivan9</p>
           </div>
         </a>
 
@@ -22,7 +22,7 @@ export default function SocialLinks() {
         >
           <div className="social-item">
             <img src="/github.png" alt="github" />
-            <p className="url">esosullivan92</p>
+            <p className="url">github/esosullivan92</p>
           </div>
         </a>
       </div>

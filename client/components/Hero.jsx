@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="title">Eamonn O&apos;Sullivan</h1>
-          <h3 className="subtitle">A Web Developer</h3>
+          <h3 className="subtitle">Web Developer</h3>
 
           <div className="about">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
