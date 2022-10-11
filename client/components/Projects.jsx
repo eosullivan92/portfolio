@@ -19,7 +19,7 @@ export default function Projects() {
     },
     {
       name: 'Plantasia',
-      subtitle: 'Your houseplants best friend',
+      subtitle: 'Your houseplants favourite app',
       link: 'https://plantasia2000.herokuapp.com/',
       screenshot: '/Artboard 1.png',
       stack: 'CSS, React, Redux, MaterialUI, Express, SQLite3',
@@ -36,11 +36,14 @@ export default function Projects() {
 
   return (
     <div className="projects-container">
+      <h2>A sample of my work...</h2>
       <div className="projects-grid">
         {projectData.map((project, i) => (
           <div className="project" key={i}>
             <h3 className="project-name">{project.name}</h3>
             <p className="project-subtitle">{project.subtitle}</p>
+            <a href={project.link}>{project.link}</a>
+            <img src={project.screenshot} alt="" />
           </div>
         ))}
       </div>
