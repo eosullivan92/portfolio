@@ -24,6 +24,7 @@ nav {
   top: 0;
   width: 100%;
   padding-right: 20em;
+  background: #F7F7F7;
 }
 nav h2 {
   font: 100% "Powerr", Poppins, sans-serif;
@@ -38,6 +39,10 @@ nav ul {
 nav li {
   list-style: none;
   position: relative;
+}
+nav li a {
+  text-decoration: none;
+  color: #3B3B3B;
 }
 nav li::after {
   content: "";
@@ -84,7 +89,9 @@ nav li:hover:after {
   color: #515151;
 }
 .hero-container .hero-content .social-container {
+  padding-top: 1em;
   display: flex;
+  flex-direction: column;
   gap: 2em;
 }
 .hero-container .hero-content .social-container a {
@@ -136,26 +143,55 @@ nav li:hover:after {
   cursor: pointer;
 }
 .projects-container .projects-grid .project h3 {
-  padding: 1em 0;
-  padding-left: 20px;
+  padding: 20px 0;
+  padding-left: 30px;
   font-size: 16px;
 }
-.projects-container .projects-grid .project p {
+.projects-container .projects-grid .project .project-subtitle {
   font-size: 22px;
-  padding-left: 20px;
+  padding-left: 30px;
+}
+.projects-container .projects-grid .project .project-url {
+  padding-left: 30px;
 }
 .projects-container .projects-grid .project a {
-  padding-left: 20px;
   text-decoration: none;
   color: #F7F7F7;
 }
 .projects-container .projects-grid .project img {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: absolute;
   height: 500px;
   width: 500px;
+  transition: all 0.3s ease-out;
+  border-radius: 3px;
+}
+.projects-container .projects-grid .project .image-collapse {
+  top: 90%;
+  left: 10%;
+}
+.projects-container .projects-grid .project .image-high {
   top: 30%;
   left: 10%;
+}
+.projects-container .projects-grid .project .project-info {
+  padding: 20px 30px 10px 30px;
+  font-size: 12px;
+  height: 350px;
+  overflow-y: scroll;
+}
+.projects-container .projects-grid .project .project-info p {
+  padding-top: 10px;
+}
+.projects-container .projects-grid .project .project-info .bold {
+  font-weight: bold;
+}
+.projects-container .projects-grid .project .project-info ul {
+  padding-top: 10px;
+}
+.projects-container .projects-grid .project .project-info ul li {
+  list-style: initial;
+  padding-bottom: 10px;
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=output.css.map */

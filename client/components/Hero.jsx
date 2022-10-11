@@ -5,24 +5,24 @@ import SocialLinks from './SocialLinks'
 export default function Hero() {
   return (
     <>
-      <div className="hero-container">
+      <section className="hero-container" id="hero">
         <div className="hero-content">
           <h1 className="title">Eamonn O&apos;Sullivan</h1>
           <h3 className="subtitle">Web Developer</h3>
 
           <div className="about">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            asperiores harum fuga quidem, sapiente architecto nam ex quis,
-            itaque aliquam necessitatibus repellendus, nemo labore modi sit? A
-            quo asperiores nam! Dolorem, sint? Corrupti in porro incidunt
-            explicabo repellendus aspernatur molestiae corporis officiis nemo
-            tempore qui illum deserunt earum, pariatur esse alias accusamus odio
-            temporibus iste magnam tenetur. Labore, voluptas eveniet.
+            I am a dynamic and challenge-driven professional transitioning from
+            the travel and accommodation sector into a career in Software
+            Development with a focus on Front End Web Development. I am
+            passionate about continuous improvement, not only for my teams but
+            for myself, and I am committed to learning new skills and
+            capabilities to support my colleagues in overcoming complex
+            problems.
           </div>
           <SocialLinks />
         </div>
         <HeroImage />
-      </div>
+      </section>
     </>
   )
 }
