@@ -7,14 +7,14 @@ export default function Nav() {
         <h2 className="nav-header">EO</h2>
         <ul className="nav-items">
           <li className="nav-item">
-            <a href="/about">About</a>
+            <a href="#about">About</a>
           </li>
           <li className="nav-item">
             {' '}
-            <a href="/projects">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li className="nav-item">
-            <a href="/contact">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>

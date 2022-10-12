@@ -2,6 +2,8 @@ import React from 'react'
 import Nav from './Nav'
 import Hero from './Hero'
 import Projects from './Projects'
+import Tools from './Tools'
+import Contact from './Contact'
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <Nav />
       <Hero />
       <Projects />
+      <Tools />
+      <Contact />
     </div>
   )
 }

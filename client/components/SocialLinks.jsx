@@ -46,6 +46,32 @@ export default function SocialLinks() {
             <p className="url">Download CV</p>
           </div>
         </a>
+        <a href="https://github.com/eosullivan92/portfolio">
+          <div className="social-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="icon-code"
+              height="38px"
+              width="38px"
+            >
+              <rect
+                width="18"
+                height="18"
+                x="3"
+                y="3"
+                className="primary"
+                rx="2"
+              />
+              <path
+                className="secondary"
+                fill="#F7F7F7"
+                d="M8.7 13.3a1 1 0 0 1-1.4 1.4l-2-2a1 1 0 0 1 0-1.4l2-2a1 1 0 1 1 1.4 1.4L7.42 12l1.3 1.3zm6.6 0l1.29-1.3-1.3-1.3a1 1 0 1 1 1.42-1.4l2 2a1 1 0 0 1 0 1.4l-2 2a1 1 0 0 1-1.42-1.4zm-3.32 3.9a1 1 0 0 1-1.96-.4l2-10a1 1 0 0 1 1.96.4l-2 10z"
+              />
+            </svg>
+            <p className="url">Source Code</p>
+          </div>
+        </a>
       </div>
     </>
   )

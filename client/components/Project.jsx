@@ -24,7 +24,14 @@ export default function Project({ project }) {
         >
           <p className="project-info-item">
             <span className="bold">Github:</span>{' '}
-            <a href={project.repository}> {project.repository}</a>
+            <a href={project.repository} target="_blank" rel="noreferrer">
+              {' '}
+              {project.repository}
+            </a>
+          </p>
+          <p className="project-info-item">
+            {' '}
+            <span className="bold">Stack:</span> {project.stack}
           </p>
           <p className="project-info-item">
             {' '}

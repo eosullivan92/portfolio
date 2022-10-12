@@ -2,7 +2,7 @@
 @use 'layout'
 @use 'typography'
 
-.hero-container 
+.hero-container
     height: 100vh
     width: 100%
     display: flex
@@ -29,14 +29,14 @@
             color: colors.$tertiary-dark
 
         .social-container
+            width: 100%
             padding-top: 1em
-            display: flex
-            flex-direction: column
-            gap: 2em
+            display: grid
+            grid-template-columns: 1fr 1fr
+            row-gap: 10px
 
             a 
                 text-decoration: none
-                // color: colors.$primary-dark
                 color: colors.$accent-dark
             
             .social-item
@@ -61,3 +61,59 @@
             border-radius: 50%
             object-fit: cover
             
+
+@media (max-width: 950px) 
+    .hero-container 
+        width: 100%
+        display: flex
+        flex-direction: column
+        padding-bottom: 5em
+
+        .hero-content 
+            width: 100%
+            @include layout.flex-column-center()
+            order: 2
+            text-align: center
+
+            .social-container
+                width: 500px
+
+        .hero-image 
+            padding-top: 5em
+            padding-bottom: 2em
+            width: 100%
+            order: 1
+            @include layout.flex-column-center()
+        
+            img 
+                width: 250px
+                height: 250px
+                border-radius: 50%
+                object-fit: cover
+                
+
+@media (max-width: 650px) 
+    .hero-container 
+        height: auto
+        width: 100%
+        display: flex
+        flex-direction: column
+        padding-bottom: 5em
+
+        .hero-content 
+            width: 100%
+            @include layout.flex-column-center()
+            order: 2
+            text-align: center
+
+            .social-container
+                width: 420px
+
+@media (max-width: 650px) 
+    .hero-container 
+
+        .hero-content 
+
+            .social-container
+                grid-template-columns: 1fr
+                place-items: center

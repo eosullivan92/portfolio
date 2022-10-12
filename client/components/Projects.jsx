@@ -22,7 +22,7 @@ export default function Projects() {
       name: 'Plantasia',
       subtitle: 'Your houseplants favourite app',
       link: 'https://plantasia2000.herokuapp.com/',
-      screenshot: '/Artboard 1.png',
+      screenshot: '/plantasia-2.png',
       stack: 'CSS, React, Redux, MaterialUI, Express, SQLite3',
       repository: 'https://github.com/eosullivan92/Plantasia',
       description:
