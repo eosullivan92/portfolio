@@ -25,7 +25,7 @@ export default function SocialLinks() {
             <p className="url">github/esosullivan92</p>
           </div>
         </a>
-        <a href="/eamonn-osullivan-cv.pdf" download="Eamonn O'Sullivan CV">
+        <a href="/EamonnOsullivan-CV.pdf" download="Eamonn O'Sullivan CV">
           <div className="social-item">
             <svg
               xmlns="http://www.w3.org/2000/svg"
