@@ -1,21 +1,5 @@
-# React Boilerplate
+https://eamonn-osullivan.up.railway.app/
 
-## Packages Included
+Welcome to my Portfolio v1.0
 
-- react (webpack, babel, etc.)
-- react-router-dom
-- express
-- jest
-- eslint
-
-## Setup
-
-- [ ] Clone this repo, navigate to it, install packages, and start the server with `npm run dev`
-  <details style="padding-left: 2em">
-    <summary>Tip</summary>
-
-    ```sh
-    npm install
-    npm run dev
-    ```
-  </details>
+Watch this space, more projects coming soon... 
