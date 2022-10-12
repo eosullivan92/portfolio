@@ -16,7 +16,7 @@ export default function SocialLinks() {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/eosullivan9/"
+          href="https://github.com/eosullivan92"
           target="_blank"
           rel="noreferrer"
         >
@@ -46,7 +46,11 @@ export default function SocialLinks() {
             <p className="url">Download CV</p>
           </div>
         </a>
-        <a href="https://github.com/eosullivan92/portfolio">
+        <a
+          href="https://github.com/eosullivan92/portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="social-item">
             <svg
               xmlns="http://www.w3.org/2000/svg"
