@@ -118,7 +118,7 @@ export default function Contact() {
                   d="M9 4h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H9v-6H5v6H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h1a2 2 0 1 1 4 0z"
                 />
               </svg>
-              <span>Open to Work: Australia & NZ</span>
+              <span>Open to work: Australia & NZ</span>
             </li>
           </ul>
         </div>
