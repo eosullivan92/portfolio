@@ -45,12 +45,12 @@ export default function Contact() {
                 width="24px"
               >
                 <path
-                  fill="#8662C7"
+                  fill="#CFBCF2"
                   className="primary"
                   d="M22 8.62V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.62l9.55 4.77a1 1 0 0 0 .9 0L22 8.62z"
                 />
                 <path
-                  fill="#8662C7"
+                  fill="#CFBCF2"
                   className="secondary"
                   d="M12 11.38l-10-5V6c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v.38l-10 5z"
                 />
@@ -66,12 +66,12 @@ export default function Contact() {
                 width="24px"
               >
                 <path
-                  fill="#8662C7"
+                  fill="#CFBCF2"
                   className="primary"
                   d="M4 2h4a1 1 0 0 1 .98.8l1 5a1 1 0 0 1-.27.9l-2.52 2.52a12.05 12.05 0 0 0 5.59 5.59l2.51-2.52a1 1 0 0 1 .9-.27l5 1c.47.1.81.5.81.98v4a2 2 0 0 1-2 2h-2A16 16 0 0 1 2 6V4c0-1.1.9-2 2-2z"
                 />
                 <path
-                  fill="#8662C7"
+                  fill="#CFBCF2"
                   className="secondary"
                   d="M22 10a1 1 0 0 1-2 0 6 6 0 0 0-6-6 1 1 0 0 1 0-2 8 8 0 0 1 8 8zm-4 0a1 1 0 0 1-2 0 2 2 0 0 0-2-2 1 1 0 0 1 0-2 4 4 0 0 1 4 4z"
                 />
@@ -87,12 +87,12 @@ export default function Contact() {
                 width="24px"
               >
                 <path
-                  fill="#8662C7"
+                  fill="#CFBCF2"
                   className="primary"
                   d="M9 22H5a1 1 0 0 1-1-1V11l8-8 8 8v10a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v4a1 1 0 0 1-1 1zm3-9a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
                 />
                 <path
-                  fill="#8662C7"
+                  fill="#CFBCF2"
                   className="secondary"
                   d="M12.01 4.42l-8.3 8.3a1 1 0 1 1-1.42-1.41l9.02-9.02a1 1 0 0 1 1.41 0l8.99 9.02a1 1 0 0 1-1.42 1.41l-8.28-8.3z"
                 />
@@ -101,7 +101,7 @@ export default function Contact() {
             </li>
             <li>
               <svg
-                fill="#8662C7"
+                fill="#CFBCF2"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 className="icon-office"
@@ -109,7 +109,7 @@ export default function Contact() {
                 width="24px"
               >
                 <path
-                  fill="#8662C7"
+                  fill="#CFBCF2"
                   className="secondary"
                   d="M5 9h15a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2zm12 2v3h3v-3h-3zm0 5v3h3v-3h-3zm-5 0v3h3v-3h-3zm0-5v3h3v-3h-3z"
                 />
