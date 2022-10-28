@@ -4,6 +4,21 @@ import Project from './Project'
 export default function Projects() {
   const projectData = [
     {
+      name: 'The Lost Crates',
+      subtitle: 'Full stack e-commerce platform',
+      link: 'https://the-lost-crates.up.railway.app',
+      screenshot: '/lostcrates.png',
+      repository: 'https://github.com/eosullivan92/lost-crates',
+      stack: 'React, Redux, Sass, Express, SQLite3/Postgres',
+      description:
+        'Full stack e-commerce project where users can add/remove to cart and place orders. Orders are saved in a database, and can be fetched with an order ID. State on the front end is managed using Redux and will persist via local storage.',
+      reflections: [
+        'I started this project to sharpen my backend skills, utilising multiple database tables and storing order information. This gave me a lot of practice making joins across tables and manipulating data to get it ready for the frontend.',
+        'I am enjoying getting familiar with Redux to handle more complicated application states',
+        'I am hoping to add authentication in the future so users can see only orders they have made. I would also like to implement admin rights to perform CRUD operations on the backend.',
+      ],
+    },
+    {
       name: 'Colorful Life',
       subtitle: 'A color palette generator',
       link: 'https://colorful-life.herokuapp.com/',
