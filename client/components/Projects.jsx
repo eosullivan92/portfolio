@@ -6,7 +6,7 @@ export default function Projects() {
     {
       name: 'The Lost Crates',
       subtitle: 'Full stack e-commerce platform',
-      link: 'https://the-lost-crates.up.railway.app',
+      link: 'https://www.thelostcrates.co.nz/',
       screenshot: '/lostcrates.png',
       repository: 'https://github.com/eosullivan92/lost-crates',
       stack: 'React, Redux, Sass, Express, SQLite3/Postgres',
@@ -15,7 +15,7 @@ export default function Projects() {
       reflections: [
         'I started this project to sharpen my backend skills, utilising multiple database tables and storing order information. This gave me a lot of practice making joins across tables and manipulating data to get it ready for the frontend.',
         'I am enjoying getting familiar with Redux to handle more complicated application states',
-        'I am hoping to add authentication in the future so users can see only orders they have made. I would also like to implement admin rights to perform CRUD operations on the backend.',
+        'In the future I would like to implement an admin portal to perform CRUD operations on the backend.',
       ],
     },
     {
