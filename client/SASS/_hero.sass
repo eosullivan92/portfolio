@@ -3,10 +3,11 @@
 @use 'typography'
 
 .hero-container
-    height: 100vh
+    min-height: 100vh
     width: 100%
     display: flex
     flex-direction: row
+    align-items: center
     
     .hero-content 
         height: 100%
@@ -24,6 +25,9 @@
             width: 85%
             padding: 1em 0
             color: colors.$tertiary-dark
+
+            p 
+                padding-top: 1em
         
         .subtitle 
             color: colors.$tertiary-dark

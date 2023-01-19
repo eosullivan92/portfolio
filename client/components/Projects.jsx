@@ -21,7 +21,7 @@ export default function Projects() {
     {
       name: 'Colorful Life',
       subtitle: 'A color palette generator',
-      link: 'https://colorful-life.herokuapp.com/',
+      link: 'https://colorful-life-production.up.railway.app/',
       screenshot: '/color-still.png',
       repository: 'https://github.com/eosullivan92/color-palette-generator',
       stack: 'CSS, React, Express, SQLite3',
@@ -36,7 +36,7 @@ export default function Projects() {
     {
       name: 'Plantasia',
       subtitle: 'Your houseplants favourite app',
-      link: 'https://plantasia2000.herokuapp.com/',
+      link: 'Not currently deployed',
       screenshot: '/plantasia-2.png',
       stack: 'CSS, React, Redux, MaterialUI, Express, SQLite3',
       repository: 'https://github.com/eosullivan92/Plantasia',
