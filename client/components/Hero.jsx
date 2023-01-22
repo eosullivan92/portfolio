@@ -20,7 +20,7 @@ export default function Hero() {
               I&apos;m a Kiwi professional with 5 years of Business Development
               experience in the Travel & Tourism industry. I began my Web
               Development journey in 2021, eager to make use of the COVID
-              downtime, however what started as a hobby quickly turned into an
+              downtime, however what started as a hobby quickly turned into a
               passion. Fast forward to the present and I am now a graduate of
               Dev Academy Aotearoa with over a year and a half of Web
               Development experience under my belt, and ready to help you with

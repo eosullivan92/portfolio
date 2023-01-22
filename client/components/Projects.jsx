@@ -19,6 +19,21 @@ export default function Projects() {
       ],
     },
     {
+      name: 'If You Like',
+      subtitle: 'A Reddit-like music forum',
+      link: 'https://if-you-like-production.up.railway.app/',
+      screenshot: '/if-you-like.png',
+      repository: 'https://github.com/eosullivan92/If-you-like-v2',
+      stack: 'React, Typescript, Sass, Express, Prisma, Postgres',
+      description:
+        'A simple Reddit-like forum where users can discuss music and find suggestions based on their taste',
+      reflections: [
+        "My main purpose with this project was to learn and practice TypeScript on both the front and back end. There we're certainly some frustrating TS moments during the build, but happy to have overcome these.",
+        'I used Prisma for my ORM library. I love how intuative the query builder is, and it works great with TypeScript.',
+        'As my main focus for this project was to practice TypeScript, I have left the project fairly bare bones. Rather than implement an authentication system, I decided to create a mock one using Express middleware & cookies.',
+      ],
+    },
+    {
       name: 'Colorful Life',
       subtitle: 'A color palette generator',
       link: 'https://colorful-life-production.up.railway.app/',
