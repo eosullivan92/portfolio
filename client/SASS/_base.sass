@@ -10,7 +10,14 @@
 body 
   @include colors.color-scheme(colors.$scheme-default ...)
   font: 100% typography.$font-main
-  margin: 0 10em
+
+.content
+    transition: margin-left 0.4s ease-in-out
+    margin-left: 100px
+
+.content-pushed
+    margin-left: 300px
+    transition: margin-left 0.4s ease-in-out
 
 @media (max-width: layout.$media-desktop) 
     body 

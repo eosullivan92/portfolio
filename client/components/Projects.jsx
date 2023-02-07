@@ -30,7 +30,8 @@ export default function Projects() {
       reflections: [
         "My main purpose with this project was to learn and practice TypeScript on both the front and back end. There we're certainly some frustrating TS moments during the build, but happy to have overcome these.",
         'I used Prisma for my ORM library. I love how intuative the query builder is, and it works great with TypeScript.',
-        'As my main focus for this project was to practice TypeScript, I have left the project fairly bare bones. Rather than implement an authentication system, I decided to create a mock one using Express middleware & cookies.',
+        'I also used this project as an opportunity to play around with React Context & React Hooks. This has helped clean up my React components by keeping the majority of the state and logic seperate.',
+        'As my main focus for this project was to practice TypeScript, I have left the project fairly bare bones. Rather than implement an authentication system, I decided to create a mock one using Express middleware & cookies, and I have left the design very basic for now.',
       ],
     },
     {
