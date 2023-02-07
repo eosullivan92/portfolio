@@ -2,29 +2,31 @@
 @use 'layout'
 @use 'typography'
 
+
 .projects-container 
     min-height: 70vh
     height: auto
     width: 100%
     padding-bottom: 5em
 
+
     h2
-        padding-bottom: 2em
-        color: colors.$secondary-dark
+        padding: 2em
+
+        color: colors.$accent-blue
 
     .projects-grid
         display: grid
-        grid-template-columns: repeat(auto-fill, minmax(370px, 1fr))
-        grid-gap: 3rem
+        grid-template-columns: repeat(2, 50%)
 
         .project
             position: relative
-            background: colors.$accent-light
             width: 100%
-            height: 500px
+            aspect-ratio: 1.5 / 1
             overflow: hidden
-            border-radius: 3px
             cursor: pointer
+            border-top: 1px solid colors.$accent-blue
+            
 
             h3
                 padding: 20px 0
@@ -40,7 +42,7 @@
 
             a
                 text-decoration: none
-                color: colors.$primary-light
+                color: colors.$accent-blue
             
             img 
                 position: absolute
@@ -60,7 +62,7 @@
             
             .project-info 
                 padding: 20px 30px 30px 30px
-                font-size: 12px
+                font-size: 16px
                 height: 350px
                 overflow-y: scroll
                 
@@ -78,6 +80,13 @@
                         padding-bottom: 10px
                         margin-left: 20px
 
+        .project:first-of-type
+            border-right: 1px solid colors.$accent-blue
+        .project:last-of-type
+            border-left: 1px solid colors.$accent-blue
+            border-bottom: 1px solid colors.$accent-blue
+        .project:nth-of-type(3)
+            border-bottom: 1px solid colors.$accent-blue
 
 @media ( max-width: 500px )
     .projects-container 

@@ -1,37 +1,44 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Sidebar({ open, handleSidebar }) {
   return (
     <div className={open ? 'sidebar sidebar-open' : 'sidebar'}>
       <button onClick={() => handleSidebar()}>
-        <img
-          className="menu-icon"
-          src="/hamburger.png"
-          alt="open navigation menu"
-        />
+        {open ? (
+          <img
+            aria-label="close menu"
+            className="menu-icon"
+            src="/cancel.png"
+            alt="open navigation menu"
+          />
+        ) : (
+          <img
+            aria-label="open menu"
+            className="menu-icon"
+            src="/hamburger.png"
+            alt="open navigation menu"
+          />
+        )}
       </button>
 
       <ul className="navigation">
-        <a href="">
-          <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-            About me
-          </li>
-        </a>
-        <a href="">
-          <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-            Portfolio
-          </li>
-        </a>
-        <a href="">
-          <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-            Services
-          </li>
-        </a>
-        <a href="">
-          <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-            Contact
-          </li>
-        </a>
+        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
+          <Link to="/">Home</Link>
+        </li>
+        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
+          <Link to="/about"> About me</Link>
+        </li>
+
+        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
+          <Link to="/portfolio">Portfolio</Link>
+        </li>
+        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
+          <Link to="/services">Services</Link>
+        </li>
+        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
+          <Link to="/contact">Contact</Link>
+        </li>
       </ul>
 
       <div className="social-icons">
