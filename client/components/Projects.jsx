@@ -7,7 +7,7 @@ export default function Projects() {
       name: 'The Lost Crates',
       subtitle: 'Full stack e-commerce platform',
       link: 'https://www.thelostcrates.co.nz/',
-      screenshot: '/lostcrates.png',
+      screenshot: '/TLC.png',
       repository: 'https://github.com/eosullivan92/lost-crates',
       stack: 'React, Redux, Sass, Express, SQLite3/Postgres',
       description:
@@ -22,7 +22,7 @@ export default function Projects() {
       name: 'If You Like',
       subtitle: 'A Reddit-like music forum',
       link: 'https://if-you-like-production.up.railway.app/',
-      screenshot: '/if-you-like.png',
+      screenshot: '/ifyoulike.png',
       repository: 'https://github.com/eosullivan92/If-you-like-v2',
       stack: 'React, Typescript, Sass, Express, Prisma, Postgres',
       description:
@@ -38,7 +38,7 @@ export default function Projects() {
       name: 'Colorful Life',
       subtitle: 'A color palette generator',
       link: 'https://colorful-life-production.up.railway.app/',
-      screenshot: '/color-still.png',
+      screenshot: '/colorful.png',
       repository: 'https://github.com/eosullivan92/color-palette-generator',
       stack: 'CSS, React, Express, SQLite3',
       description:
@@ -67,7 +67,7 @@ export default function Projects() {
   ]
 
   return (
-    <section className="projects-container" id="projects">
+    <section className="projects-container" id="portfolio">
       <h2>A sample of my work...</h2>
       <div className="projects-grid">
         {projectData.map((project, i) => (

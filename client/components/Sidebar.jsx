@@ -31,7 +31,8 @@ export default function Sidebar({ open, handleSidebar }) {
         </li>
 
         <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          <Link to="/portfolio">Portfolio</Link>
+          {/* <Link to="/portfolio">Portfolio</Link> */}
+          <a href="/#portfolio">Portfolio</a>
         </li>
         <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
           <Link to="/services">Services</Link>

@@ -13,6 +13,8 @@
     justify-content: space-between
     align-items: flex-start
     border-right: 1px solid colors.$accent-blue
+    background: colors.$bg-cornsilk
+    z-index: 10
     transition: width 0.4s ease-in-out
 
 
@@ -34,12 +36,14 @@
                 font-size: 1.2rem
                 transition: transform 0.4s ease-in-out
                 
+                
 
             .nav-link-visible
                 transform: translateX(0%)
 
                 a
                     text-decoration: none
+                    color: colors.$accent-blue
 
 
     
@@ -47,6 +51,7 @@
         display: flex
         flex-direction: column
         gap: 1.5em
+        padding-bottom: 3em
 
         a
 

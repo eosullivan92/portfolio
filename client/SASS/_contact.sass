@@ -1,138 +1,142 @@
 @use 'colors'
 @use 'typography'
 
-h2
-    padding: 0
-    margin: 0
+#contact
+    margin: 3em
 
-.contact-container
-    min-height: 50vh
-    width: 100%
-    padding-top: 2em
-    display: flex
-    padding-bottom: 5em
+    h2
+        padding: 0
+        margin: 0
 
-    .contact-content
-        width: 50%
-        padding-top: 4em
+    .contact-container
+        min-height: 50vh
+        width: 100%
+        padding-top: 2em
+        display: flex
+        
 
-    
-        .cta
-            font-size: 22px
-            
-
-        ul
-            padding: 0
-            padding-top: 2em
-
-            li
-                padding-top: 1em
-                list-style: none
-
-                span
-                    position: relative
-                    padding-left: 1em
-                    bottom: 5px
+        .contact-content
+            width: 50%
+            padding-top: 4em
 
         
-    .contact-form
-        width: 50%
+            .cta
+                font-size: 22px
+                
 
-        form
-            display: flex
-            flex-direction: column
-            justify-content: center
+            ul
+                padding: 0
+                padding-top: 2em
 
-            .input-control
-                position: relative
-                width: 100%
-                height: 50px
-                margin-bottom: 20px
+                li
+                    padding-top: 1em
+                    list-style: none
 
+                    span
+                        position: relative
+                        padding-left: 1em
+                        bottom: 5px
 
-                input  
-                    width: 100%
-                    height: 100%
-                    font: 100% typography.$font-main
-                    font-size: 16px
-                    outline: none
-                    border: 2px solid colors.$tertiary-light
-                    border-radius: 3px
-                    padding: 0 10px
-                    background: colors.$primary-light
-                    color: colors.$tertiary-dark
-
-                input:not(:placeholder-shown) + label,
-                input:focus + label,
-                input:valid + label 
-                    font-size: 12px
-                    top: 0
-                    background: colors.$primary-light
-                    padding: 5px
-                    color: colors.$tertiary-dark
-
-                label 
-                    position: absolute
-                    top: 50%
-                    left: 10px
-                    transform: translateY(-50%)
-                    font-size: 16px
-                    color: colors.$tertiary-light
-                    pointer-events: none
-                    transition: all .4s ease
             
-            .text-control
-                position: relative
-                width: 100%
-                margin-bottom: 20px
-                    
-                textarea
-                    font: 100% typography.$font-main
+        .contact-form
+            width: 50%
+            max-width:650px
+
+            form
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                .input-control
+                    position: relative
                     width: 100%
-                    height: auto
-                    outline: none
-                    border: 2px solid colors.$tertiary-light
-                    border-radius: 3px
-                    padding: 10px 10px
-                    background: colors.$primary-light
-                    color: colors.$tertiary-dark
+                    height: 50px
+                    margin-bottom: 20px
 
+
+                    input  
+                        width: 100%
+                        height: 100%
+                        font: 100% typography.$font-main
+                        font-size: 16px
+                        outline: none
+                        border: 2px solid colors.$tertiary-light
+                        border-radius: 3px
+                        padding: 0 10px
+                        background: colors.$primary-light
+                        color: colors.$tertiary-dark
+
+                    input:not(:placeholder-shown) + label,
+                    input:focus + label,
+                    input:valid + label 
+                        font-size: 12px
+                        top: 0
+                        background: colors.$primary-light
+                        padding: 5px
+                        color: colors.$accent-blue
+
+                    label 
+                        position: absolute
+                        top: 50%
+                        left: 10px
+                        transform: translateY(-50%)
+                        font-size: 16px
+                        color: colors.$tertiary-light
+                        pointer-events: none
+                        transition: all .4s ease
                 
-                
-                textarea:not(:placeholder-shown) + label,
-                textarea:focus + label,
-                textarea:valid + label 
-                    font-size: 12px
-                    top: -10px
-                    background: colors.$primary-light
-                    padding: 5px
-                    color:  colors.$tertiary-dark
+                .text-control
+                    position: relative
+                    width: 100%
+                    margin-bottom: 20px
+                        
+                    textarea
+                        font: 100% typography.$font-main
+                        width: 100%
+                        height: auto
+                        outline: none
+                        border: 2px solid colors.$tertiary-light
+                        border-radius: 3px
+                        padding: 10px 10px
+                        background: colors.$primary-light
+                        color: colors.$tertiary-dark
+
+                    
+                    
+                    textarea:not(:placeholder-shown) + label,
+                    textarea:focus + label,
+                    textarea:valid + label 
+                        font-size: 12px
+                        top: -10px
+                        background: colors.$primary-light
+                        padding: 5px
+                        color:  colors.$accent-blue
 
 
 
-                label 
-                    position: absolute
-                    top: 5%
-                    left: 10px
-                    transform: translateY(-5%)
+                    label 
+                        position: absolute
+                        top: 5%
+                        left: 10px
+                        transform: translateY(-5%)
+                        font-size: 16px
+                        color: colors.$tertiary-light
+                        pointer-events: none
+                        transition: all .4s ease
+
+
+
+                button
+                    background: colors.$accent-blue
+                    color: colors.$bg-cornsilk
+                    text-align: center
+                    letter-spacing: 1px
                     font-size: 16px
-                    color: colors.$tertiary-light
-                    pointer-events: none
-                    transition: all .4s ease
-
-
-
-            button
-                background: colors.$accent-dark
-                color: colors.$primary-light
-                text-align: center
-                letter-spacing: 1px
-                font-size: 16px
-                border: none
-                border-radius: 3px
-                display: block
-                padding: 15px 8px
-                cursor: pointer
+                    border: none
+                    border-radius: 3px
+                    display: block
+                    padding: 15px 8px
+                    cursor: pointer
 
 
 @media (max-width: 860px )

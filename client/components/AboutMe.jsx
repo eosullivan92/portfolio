@@ -2,7 +2,7 @@ import React from 'react'
 import HeroImage from './HeroImage'
 import SocialLinks from './SocialLinks'
 
-export default function Hero() {
+export default function AboutMe() {
   return (
     <>
       <section className="hero-container" id="about">

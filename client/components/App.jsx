@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { useSessionStorage } from '../hooks/useSessionStorage'
 import Nav from './Nav'
-import Hero from './AboutMe'
+import AboutMe from './AboutMe'
 import Projects from './Projects'
-import Tools from './Tools'
 import Contact from './Contact'
 import Sidebar from './Sidebar'
 
@@ -26,9 +25,18 @@ function App() {
       <div className={open ? 'content content-pushed' : 'content'}>
         <Nav />
         <Routes>
-          <Route path="/" element={<Hero />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <AboutMe />
+                <Projects />
+              </>
+            }
+          />
+          <Route path="/" element={<Projects />} />
           <Route path="/portfolio" element={<Projects />} />
-          <Route path="/about" element={<Tools />} />
+          <Route path="/about" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

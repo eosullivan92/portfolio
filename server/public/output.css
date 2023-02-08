@@ -17,6 +17,7 @@ body {
 .content {
   transition: margin-left 0.4s ease-in-out;
   margin-left: 100px;
+  scroll-behavior: smooth;
 }
 
 .content-pushed {
@@ -75,6 +76,9 @@ body {
   font-size: 20px;
   font-weight: 600;
 }
+.horizontal-header a {
+  text-decoration: none;
+}
 .horizontal-header a .block-text {
   height: 100px;
   line-height: 100px;
@@ -83,10 +87,12 @@ body {
   color: #fdf8e1;
   text-align: center;
   vertical-align: middle;
+  font-weight: 800;
 }
 
 .hero-container {
-  min-height: 100vh;
+  margin: 3em;
+  min-height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -219,6 +225,8 @@ body {
   height: auto;
   width: 100%;
   padding-bottom: 5em;
+  border-top: 1px solid #072ac8;
+  scroll-behavior: smooth;
 }
 .projects-container h2 {
   padding: 2em;
@@ -231,7 +239,7 @@ body {
 .projects-container .projects-grid .project {
   position: relative;
   width: 100%;
-  aspect-ratio: 1.5/1;
+  aspect-ratio: 1.4/1;
   overflow: hidden;
   cursor: pointer;
   border-top: 1px solid #072ac8;
@@ -254,8 +262,7 @@ body {
 }
 .projects-container .projects-grid .project img {
   position: absolute;
-  height: 500px;
-  width: 500px;
+  width: 80%;
   transition: all 0.3s ease-out;
   border-radius: 3px;
 }
@@ -286,6 +293,11 @@ body {
   list-style: initial;
   padding-bottom: 10px;
   margin-left: 20px;
+}
+.projects-container .projects-grid .project img:last-of-type {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top;
 }
 .projects-container .projects-grid .project:first-of-type {
   border-right: 1px solid #072ac8;
@@ -344,53 +356,55 @@ body {
   }
 }
 
-h2 {
+#contact {
+  margin: 3em;
+}
+#contact h2 {
   padding: 0;
   margin: 0;
 }
-
-.contact-container {
+#contact .contact-container {
   min-height: 50vh;
   width: 100%;
   padding-top: 2em;
   display: flex;
-  padding-bottom: 5em;
 }
-.contact-container .contact-content {
+#contact .contact-container .contact-content {
   width: 50%;
   padding-top: 4em;
 }
-.contact-container .contact-content .cta {
+#contact .contact-container .contact-content .cta {
   font-size: 22px;
 }
-.contact-container .contact-content ul {
+#contact .contact-container .contact-content ul {
   padding: 0;
   padding-top: 2em;
 }
-.contact-container .contact-content ul li {
+#contact .contact-container .contact-content ul li {
   padding-top: 1em;
   list-style: none;
 }
-.contact-container .contact-content ul li span {
+#contact .contact-container .contact-content ul li span {
   position: relative;
   padding-left: 1em;
   bottom: 5px;
 }
-.contact-container .contact-form {
+#contact .contact-container .contact-form {
   width: 50%;
+  max-width: 650px;
 }
-.contact-container .contact-form form {
+#contact .contact-container .contact-form form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.contact-container .contact-form form .input-control {
+#contact .contact-container .contact-form form .input-control {
   position: relative;
   width: 100%;
   height: 50px;
   margin-bottom: 20px;
 }
-.contact-container .contact-form form .input-control input {
+#contact .contact-container .contact-form form .input-control input {
   width: 100%;
   height: 100%;
   font: 100% Poppins, sans-serif;
@@ -402,16 +416,16 @@ h2 {
   background: #F7F7F7;
   color: #515151;
 }
-.contact-container .contact-form form .input-control input:not(:placeholder-shown) + label,
-.contact-container .contact-form form .input-control input:focus + label,
-.contact-container .contact-form form .input-control input:valid + label {
+#contact .contact-container .contact-form form .input-control input:not(:placeholder-shown) + label,
+#contact .contact-container .contact-form form .input-control input:focus + label,
+#contact .contact-container .contact-form form .input-control input:valid + label {
   font-size: 12px;
   top: 0;
   background: #F7F7F7;
   padding: 5px;
-  color: #515151;
+  color: #072ac8;
 }
-.contact-container .contact-form form .input-control label {
+#contact .contact-container .contact-form form .input-control label {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -421,12 +435,12 @@ h2 {
   pointer-events: none;
   transition: all 0.4s ease;
 }
-.contact-container .contact-form form .text-control {
+#contact .contact-container .contact-form form .text-control {
   position: relative;
   width: 100%;
   margin-bottom: 20px;
 }
-.contact-container .contact-form form .text-control textarea {
+#contact .contact-container .contact-form form .text-control textarea {
   font: 100% Poppins, sans-serif;
   width: 100%;
   height: auto;
@@ -437,16 +451,16 @@ h2 {
   background: #F7F7F7;
   color: #515151;
 }
-.contact-container .contact-form form .text-control textarea:not(:placeholder-shown) + label,
-.contact-container .contact-form form .text-control textarea:focus + label,
-.contact-container .contact-form form .text-control textarea:valid + label {
+#contact .contact-container .contact-form form .text-control textarea:not(:placeholder-shown) + label,
+#contact .contact-container .contact-form form .text-control textarea:focus + label,
+#contact .contact-container .contact-form form .text-control textarea:valid + label {
   font-size: 12px;
   top: -10px;
   background: #F7F7F7;
   padding: 5px;
-  color: #515151;
+  color: #072ac8;
 }
-.contact-container .contact-form form .text-control label {
+#contact .contact-container .contact-form form .text-control label {
   position: absolute;
   top: 5%;
   left: 10px;
@@ -456,9 +470,9 @@ h2 {
   pointer-events: none;
   transition: all 0.4s ease;
 }
-.contact-container .contact-form form button {
-  background: #8662C7;
-  color: #F7F7F7;
+#contact .contact-container .contact-form form button {
+  background: #072ac8;
+  color: #fdf8e1;
   text-align: center;
   letter-spacing: 1px;
   font-size: 16px;
@@ -501,6 +515,8 @@ h2 {
   justify-content: space-between;
   align-items: flex-start;
   border-right: 1px solid #072ac8;
+  background: #fdf8e1;
+  z-index: 10;
   transition: width 0.4s ease-in-out;
 }
 .sidebar button {
@@ -524,11 +540,13 @@ h2 {
 }
 .sidebar .navigation .nav-link-visible a {
   text-decoration: none;
+  color: #072ac8;
 }
 .sidebar .social-icons {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+  padding-bottom: 3em;
 }
 .sidebar .social-icons a img {
   height: 30px;
