@@ -29,6 +29,15 @@ body {
   animation: fade 0.5s ease-in;
 }
 
+a {
+  text-decoration: none;
+  color: #072ac8;
+}
+
+li {
+  list-style: none;
+}
+
 @keyframes fade {
   0% {
     opacity: 0;
@@ -76,9 +85,6 @@ body {
   font-size: 20px;
   font-weight: 600;
 }
-.horizontal-header a {
-  text-decoration: none;
-}
 .horizontal-header a .block-text {
   height: 100px;
   line-height: 100px;
@@ -91,8 +97,8 @@ body {
 }
 
 .hero-container {
-  margin: 3em;
-  min-height: 60vh;
+  padding: 3em;
+  min-height: 70vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -100,14 +106,14 @@ body {
 }
 .hero-container .hero-content {
   height: 100%;
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .hero-container .hero-content .title {
   font: 100% "Powerr", Poppins, sans-serif;
-  color: #3B3B3B;
+  color: #072ac8;
   font-weight: 800;
   font-size: 48px;
   letter-spacing: 2px;
@@ -130,10 +136,6 @@ body {
   grid-template-columns: 1fr 1fr;
   row-gap: 10px;
 }
-.hero-container .hero-content .social-container a {
-  text-decoration: none;
-  color: #8662C7;
-}
 .hero-container .hero-content .social-container .social-item {
   display: flex;
   gap: 10px;
@@ -144,7 +146,8 @@ body {
 }
 .hero-container .hero-image {
   height: 100%;
-  width: 40%;
+  width: 30%;
+  padding-right: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -252,6 +255,7 @@ body {
 .projects-container .projects-grid .project .project-subtitle {
   font-size: 22px;
   padding-left: 30px;
+  color: #515151;
 }
 .projects-container .projects-grid .project .project-url {
   padding-left: 30px;
@@ -279,6 +283,7 @@ body {
   font-size: 16px;
   height: 350px;
   overflow-y: scroll;
+  color: #515151;
 }
 .projects-container .projects-grid .project .project-info p {
   padding-top: 10px;
@@ -358,10 +363,12 @@ body {
 
 #contact {
   margin: 3em;
+  color: #515151;
 }
 #contact h2 {
   padding: 0;
   margin: 0;
+  color: #072ac8;
 }
 #contact .contact-container {
   min-height: 50vh;
@@ -382,7 +389,6 @@ body {
 }
 #contact .contact-container .contact-content ul li {
   padding-top: 1em;
-  list-style: none;
 }
 #contact .contact-container .contact-content ul li span {
   position: relative;
@@ -409,11 +415,11 @@ body {
   height: 100%;
   font: 100% Poppins, sans-serif;
   font-size: 16px;
-  outline: none;
-  border: 2px solid #CFCFCF;
+  outline: transparent;
+  border: 1px solid #072ac8;
   border-radius: 3px;
   padding: 0 10px;
-  background: #F7F7F7;
+  background: #fdf8e1;
   color: #515151;
 }
 #contact .contact-container .contact-form form .input-control input:not(:placeholder-shown) + label,
@@ -421,7 +427,7 @@ body {
 #contact .contact-container .contact-form form .input-control input:valid + label {
   font-size: 12px;
   top: 0;
-  background: #F7F7F7;
+  background: #fdf8e1;
   padding: 5px;
   color: #072ac8;
 }
@@ -431,7 +437,7 @@ body {
   left: 10px;
   transform: translateY(-50%);
   font-size: 16px;
-  color: #CFCFCF;
+  color: #515151;
   pointer-events: none;
   transition: all 0.4s ease;
 }
@@ -445,10 +451,10 @@ body {
   width: 100%;
   height: auto;
   outline: none;
-  border: 2px solid #CFCFCF;
+  border: 1px solid #072ac8;
   border-radius: 3px;
   padding: 10px 10px;
-  background: #F7F7F7;
+  background: #fdf8e1;
   color: #515151;
 }
 #contact .contact-container .contact-form form .text-control textarea:not(:placeholder-shown) + label,
@@ -456,7 +462,7 @@ body {
 #contact .contact-container .contact-form form .text-control textarea:valid + label {
   font-size: 12px;
   top: -10px;
-  background: #F7F7F7;
+  background: #fdf8e1;
   padding: 5px;
   color: #072ac8;
 }
@@ -466,7 +472,7 @@ body {
   left: 10px;
   transform: translateY(-5%);
   font-size: 16px;
-  color: #CFCFCF;
+  color: #515151;
   pointer-events: none;
   transition: all 0.4s ease;
 }
@@ -529,7 +535,6 @@ body {
   height: 30px;
 }
 .sidebar .navigation .nav-link {
-  list-style: none;
   margin-bottom: 2em;
   transform: translateX(-150%);
   font-size: 1.2rem;
@@ -537,10 +542,6 @@ body {
 }
 .sidebar .navigation .nav-link-visible {
   transform: translateX(0%);
-}
-.sidebar .navigation .nav-link-visible a {
-  text-decoration: none;
-  color: #072ac8;
 }
 .sidebar .social-icons {
   display: flex;

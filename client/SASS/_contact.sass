@@ -3,10 +3,12 @@
 
 #contact
     margin: 3em
+    color: colors.$tertiary-dark
 
     h2
         padding: 0
         margin: 0
+        color: colors.$accent-blue
 
     .contact-container
         min-height: 50vh
@@ -30,7 +32,6 @@
 
                 li
                     padding-top: 1em
-                    list-style: none
 
                     span
                         position: relative
@@ -59,11 +60,11 @@
                         height: 100%
                         font: 100% typography.$font-main
                         font-size: 16px
-                        outline: none
-                        border: 2px solid colors.$tertiary-light
+                        outline: transparent
+                        border: 1px solid colors.$accent-blue
                         border-radius: 3px
                         padding: 0 10px
-                        background: colors.$primary-light
+                        background: colors.$bg-cornsilk
                         color: colors.$tertiary-dark
 
                     input:not(:placeholder-shown) + label,
@@ -71,7 +72,7 @@
                     input:valid + label 
                         font-size: 12px
                         top: 0
-                        background: colors.$primary-light
+                        background: colors.$bg-cornsilk
                         padding: 5px
                         color: colors.$accent-blue
 
@@ -81,7 +82,7 @@
                         left: 10px
                         transform: translateY(-50%)
                         font-size: 16px
-                        color: colors.$tertiary-light
+                        color: colors.$tertiary-dark
                         pointer-events: none
                         transition: all .4s ease
                 
@@ -95,10 +96,10 @@
                         width: 100%
                         height: auto
                         outline: none
-                        border: 2px solid colors.$tertiary-light
+                        border: 1px solid colors.$accent-blue
                         border-radius: 3px
                         padding: 10px 10px
-                        background: colors.$primary-light
+                        background: colors.$bg-cornsilk
                         color: colors.$tertiary-dark
 
                     
@@ -108,7 +109,7 @@
                     textarea:valid + label 
                         font-size: 12px
                         top: -10px
-                        background: colors.$primary-light
+                        background: colors.$bg-cornsilk
                         padding: 5px
                         color:  colors.$accent-blue
 
@@ -120,7 +121,7 @@
                         left: 10px
                         transform: translateY(-5%)
                         font-size: 16px
-                        color: colors.$tertiary-light
+                        color: colors.$tertiary-dark
                         pointer-events: none
                         transition: all .4s ease
 

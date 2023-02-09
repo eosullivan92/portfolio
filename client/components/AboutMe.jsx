@@ -5,7 +5,7 @@ import SocialLinks from './SocialLinks'
 export default function AboutMe() {
   return (
     <>
-      <section className="hero-container" id="about">
+      <section className="hero-container" id="home">
         <div className="hero-content">
           <h1 className="title">Eamonn O&apos;Sullivan</h1>
           <h3 className="subtitle">Web Developer</h3>

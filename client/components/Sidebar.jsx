@@ -24,18 +24,12 @@ export default function Sidebar({ open, handleSidebar }) {
 
       <ul className="navigation">
         <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          <Link to="/">Home</Link>
-        </li>
-        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          <Link to="/about"> About me</Link>
+          <a href="/#home">Home</a>
         </li>
 
         <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
           {/* <Link to="/portfolio">Portfolio</Link> */}
           <a href="/#portfolio">Portfolio</a>
-        </li>
-        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          <Link to="/services">Services</Link>
         </li>
         <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
           <Link to="/contact">Contact</Link>
