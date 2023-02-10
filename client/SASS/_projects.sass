@@ -1,6 +1,7 @@
 @use 'colors'
 @use 'layout'
 @use 'typography'
+@import 'utility'
 
 
 .projects-container 
@@ -24,15 +25,14 @@
             position: relative
             width: 100%
             aspect-ratio: 1.4 / 1
-            overflow: hidden
             cursor: pointer
             border-top: 1px solid colors.$accent-blue
-            
+            @include magic-border(3px, colors.$accent-blue, 0.4s, 1)
 
             h3
                 padding: 20px 0
                 padding-left: 30px
-                font-size: 16px
+                font-size: 18px
             
             .project-subtitle
                 font-size: 22px
@@ -46,46 +46,23 @@
                 text-decoration: none
                 color: colors.$accent-blue
             
-            img 
-                position: absolute
-                width: 80%
-                transition: all 0.3s ease-out
-                border-radius: 3px
+            .image-container 
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100%
+                height: 100%
 
-            .image-collapse 
-                top: 90%
-                left: 10%
+                img 
+                    width: 90%
+                    transition: all 0.3s ease-out
+                    border-radius: 3px
 
-            .image-high 
-                top: 30%
-                left: 10%
 
-            
-            .project-info 
-                padding: 20px 30px 30px 30px
-                font-size: 16px
-                height: 350px
-                overflow-y: scroll
-                color: colors.$tertiary-dark
-                
-                p
-                    padding-top: 10px
-
-                .bold 
-                    font-weight: bold
-
-                ul
-                    padding-top: 10px
-
-                    li 
-                        list-style: initial
-                        padding-bottom: 10px
-                        margin-left: 20px
-
-            img:last-of-type
-                aspect-ratio: 16 / 9
-                object-fit: cover
-                object-position: top
+                img:last-of-type
+                    aspect-ratio: 16 / 9
+                    object-fit: cover
+                    object-position: top
 
         .project:first-of-type
             border-right: 1px solid colors.$accent-blue
@@ -95,10 +72,21 @@
         .project:nth-of-type(3)
             border-bottom: 1px solid colors.$accent-blue
 
-@media ( max-width: 500px )
+@media (max-width: 1000px) 
     .projects-container 
+
         .projects-grid
-            .project
-                .image-high 
-                    top: 35%
-                    left: 10%
+            grid-template-columns: 1fr
+    
+@media (max-width: 580px) 
+
+    .project
+        aspect-ratio: 1.2 / 1
+        
+        .project-subtitle
+            display: none
+
+        .project-url 
+            display: none
+
+

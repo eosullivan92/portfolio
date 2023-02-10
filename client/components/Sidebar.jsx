@@ -1,25 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { SlMenu } from 'react-icons/sl'
+import { TfiClose } from 'react-icons/tfi'
+import { IconContext } from 'react-icons'
 
 export default function Sidebar({ open, handleSidebar }) {
   return (
     <div className={open ? 'sidebar sidebar-open' : 'sidebar'}>
       <button onClick={() => handleSidebar()}>
-        {open ? (
-          <img
-            aria-label="close menu"
-            className="menu-icon"
-            src="/cancel.png"
-            alt="open navigation menu"
-          />
-        ) : (
-          <img
-            aria-label="open menu"
-            className="menu-icon"
-            src="/hamburger.png"
-            alt="open navigation menu"
-          />
-        )}
+        <IconContext.Provider
+          value={{ style: { fontSize: '2rem' }, color: '#072ac8' }}
+        >
+          {open ? <TfiClose /> : <SlMenu />}
+        </IconContext.Provider>
       </button>
 
       <ul className="navigation">

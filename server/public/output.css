@@ -12,21 +12,22 @@ body {
   background: #fdf8e1;
   color: #072ac8;
   font: 100% Poppins, sans-serif;
+  font-size: 16px;
 }
 
 .content {
-  transition: margin-left 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   margin-left: 100px;
   scroll-behavior: smooth;
 }
 
 .content-pushed {
-  margin-left: 300px;
-  transition: margin-left 0.4s ease-in-out;
+  transform: translateX(200px);
+  transition: transform 0.4s ease-in-out;
 }
 
 .fade {
-  animation: fade 0.5s ease-in;
+  animation: fade 1s ease-in;
 }
 
 a {
@@ -44,21 +45,6 @@ li {
   }
   100% {
     opacity: 1;
-  }
-}
-@media (max-width: 1150px) {
-  body {
-    margin: 0 5em;
-  }
-}
-@media (max-width: 700px) {
-  body {
-    margin: 0 2em;
-  }
-}
-@media (max-width: 500px) {
-  body {
-    margin: 0 1em;
   }
 }
 .horizontal-header {
@@ -81,10 +67,6 @@ li {
   font-weight: 800;
   font-size: 28px;
 }
-.horizontal-header .title-container .logo-title .name-title {
-  font-size: 20px;
-  font-weight: 600;
-}
 .horizontal-header a .block-text {
   height: 100px;
   line-height: 100px;
@@ -96,6 +78,11 @@ li {
   font-weight: 800;
 }
 
+@media (max-width: 580px) {
+  .name-title {
+    display: none;
+  }
+}
 .hero-container {
   padding: 3em;
   min-height: 70vh;
@@ -160,11 +147,12 @@ li {
   object-fit: cover;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   .hero-container {
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 1em;
     padding-bottom: 5em;
   }
   .hero-container .hero-content {
@@ -243,14 +231,34 @@ li {
   position: relative;
   width: 100%;
   aspect-ratio: 1.4/1;
-  overflow: hidden;
   cursor: pointer;
   border-top: 1px solid #072ac8;
+}
+.projects-container .projects-grid .project:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  top: calc(3px/-1);
+  left: calc(3px/-1);
+  background: linear-gradient(to right, #072ac8 0%, #072ac8 100%), linear-gradient(to top, #072ac8 50%, transparent 50%), linear-gradient(to top, #072ac8 50%, transparent 50%), linear-gradient(to right, #072ac8 0%, #072ac8 100%), linear-gradient(to left, #072ac8 0%, #072ac8 100%);
+  background-size: 100% 3px, 3px 200%, 3px 200%, 0% 3px, 0% 3px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.4s ease-in-out, background-position 0.4s ease-in-out, background-size 0.4s ease-in-out;
+  transform: scaleX(0) rotate(180deg);
+  transition-delay: 0.8s, 0.4s, 0s;
+}
+.projects-container .projects-grid .project:hover:before {
+  background-size: 200% 3px, 3px 400%, 3px 400%, 55% 3px, 55% 3px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(180deg);
+  transition-delay: 0s, 0.4s, 0.8s;
 }
 .projects-container .projects-grid .project h3 {
   padding: 20px 0;
   padding-left: 30px;
-  font-size: 16px;
+  font-size: 18px;
 }
 .projects-container .projects-grid .project .project-subtitle {
   font-size: 22px;
@@ -264,42 +272,19 @@ li {
   text-decoration: none;
   color: #072ac8;
 }
-.projects-container .projects-grid .project img {
-  position: absolute;
-  width: 80%;
+.projects-container .projects-grid .project .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.projects-container .projects-grid .project .image-container img {
+  width: 90%;
   transition: all 0.3s ease-out;
   border-radius: 3px;
 }
-.projects-container .projects-grid .project .image-collapse {
-  top: 90%;
-  left: 10%;
-}
-.projects-container .projects-grid .project .image-high {
-  top: 30%;
-  left: 10%;
-}
-.projects-container .projects-grid .project .project-info {
-  padding: 20px 30px 30px 30px;
-  font-size: 16px;
-  height: 350px;
-  overflow-y: scroll;
-  color: #515151;
-}
-.projects-container .projects-grid .project .project-info p {
-  padding-top: 10px;
-}
-.projects-container .projects-grid .project .project-info .bold {
-  font-weight: bold;
-}
-.projects-container .projects-grid .project .project-info ul {
-  padding-top: 10px;
-}
-.projects-container .projects-grid .project .project-info ul li {
-  list-style: initial;
-  padding-bottom: 10px;
-  margin-left: 20px;
-}
-.projects-container .projects-grid .project img:last-of-type {
+.projects-container .projects-grid .project .image-container img:last-of-type {
   aspect-ratio: 16/9;
   object-fit: cover;
   object-position: top;
@@ -315,10 +300,20 @@ li {
   border-bottom: 1px solid #072ac8;
 }
 
-@media (max-width: 500px) {
-  .projects-container .projects-grid .project .image-high {
-    top: 35%;
-    left: 10%;
+@media (max-width: 1000px) {
+  .projects-container .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 580px) {
+  .project {
+    aspect-ratio: 1.2/1;
+  }
+  .project .project-subtitle {
+    display: none;
+  }
+  .project .project-url {
+    display: none;
   }
 }
 .tools-container {
@@ -408,7 +403,7 @@ li {
   position: relative;
   width: 100%;
   height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 #contact .contact-container .contact-form form .input-control input {
   width: 100%;
@@ -416,17 +411,17 @@ li {
   font: 100% Poppins, sans-serif;
   font-size: 16px;
   outline: transparent;
-  border: 1px solid #072ac8;
+  border: none;
   border-radius: 3px;
   padding: 0 10px;
-  background: #fdf8e1;
+  background: hsla(49deg, 88%, 99%, 0.8);
   color: #515151;
 }
 #contact .contact-container .contact-form form .input-control input:not(:placeholder-shown) + label,
 #contact .contact-container .contact-form form .input-control input:focus + label,
 #contact .contact-container .contact-form form .input-control input:valid + label {
   font-size: 12px;
-  top: 0;
+  top: -13px;
   background: #fdf8e1;
   padding: 5px;
   color: #072ac8;
@@ -451,17 +446,17 @@ li {
   width: 100%;
   height: auto;
   outline: none;
-  border: 1px solid #072ac8;
+  border: none;
   border-radius: 3px;
   padding: 10px 10px;
-  background: #fdf8e1;
+  background: hsla(49deg, 88%, 99%, 0.8);
   color: #515151;
 }
 #contact .contact-container .contact-form form .text-control textarea:not(:placeholder-shown) + label,
 #contact .contact-container .contact-form form .text-control textarea:focus + label,
 #contact .contact-container .contact-form form .text-control textarea:valid + label {
   font-size: 12px;
-  top: -10px;
+  top: -25px;
   background: #fdf8e1;
   padding: 5px;
   color: #072ac8;
@@ -522,7 +517,6 @@ li {
   align-items: flex-start;
   border-right: 1px solid #072ac8;
   background: #fdf8e1;
-  z-index: 10;
   transition: width 0.4s ease-in-out;
 }
 .sidebar button {
@@ -555,6 +549,87 @@ li {
 
 .sidebar-open {
   width: 300px;
+}
+
+.single-project-container {
+  padding: 3em;
+  width: 100%;
+}
+.single-project-container .project-header-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 5em;
+}
+.single-project-container .project-header-flex .project-header .project-url {
+  font-size: 1.2rem;
+}
+.single-project-container .project-header-flex .project-header .project-name {
+  font-size: 3rem;
+  font-family: "Powerr", Poppins, sans-serif;
+}
+.single-project-container .project-header-flex .project-header .project-subtitle {
+  font-size: 1.5rem;
+  color: #515151;
+}
+.single-project-container .project-header-flex .next-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #072ac8;
+  background: none;
+  outline: transparent;
+  color: #072ac8;
+  font-size: 1rem;
+  width: 150px;
+  height: 70px;
+  padding: 10px 10px;
+}
+.single-project-container .project-flex {
+  display: flex;
+}
+.single-project-container .project-flex .project-info {
+  width: 40%;
+  color: #515151;
+  font-size: 1rem;
+  line-height: 2;
+}
+.single-project-container .project-flex .project-info ul li {
+  list-style: initial;
+  margin-left: 2em;
+}
+.single-project-container .project-flex .project-info .stack-container {
+  padding: 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1em;
+  width: 100%;
+}
+.single-project-container .project-flex .project-info .stack-container .stack-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #072ac8;
+  width: 150px;
+  padding: 10px 15px;
+}
+.single-project-container .project-flex .project-info .project-info-item {
+  padding-top: 1em;
+}
+.single-project-container .project-flex .project-info .bold {
+  font-weight: 600;
+}
+.single-project-container .project-flex .project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.single-project-container .project-flex .project-image img {
+  width: 80%;
 }
 
 /*# sourceMappingURL=output.css.map */

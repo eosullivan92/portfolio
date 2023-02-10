@@ -10,20 +10,20 @@
 body 
   @include colors.color-scheme(colors.$scheme-default ...)
   font: 100% typography.$font-main
-  
+  font-size: 16px
         
 
 .content
-    transition: margin-left 0.4s ease-in-out
+    transition: transform 0.4s ease-in-out
     margin-left: 100px
     scroll-behavior: smooth
 
 .content-pushed
-    margin-left: 300px
-    transition: margin-left 0.4s ease-in-out
+    transform: translateX(200px)
+    transition: transform 0.4s ease-in-out
 
 .fade 
-    animation: fade 0.5s ease-in
+    animation: fade 1s ease-in
 
 a
     text-decoration: none
@@ -39,15 +39,3 @@ li
     100%
         opacity: 1
 
-@media (max-width: layout.$media-desktop) 
-    body 
-        margin: 0 5em
-  
-@media (max-width: 700px) 
-    body 
-        margin: 0 2em
-
-@media (max-width: 500px) 
-    body 
-        margin: 0 1em
-  
