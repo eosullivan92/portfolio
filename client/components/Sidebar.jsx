@@ -1,10 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import { SlMenu } from 'react-icons/sl'
 import { TfiClose } from 'react-icons/tfi'
 import { IconContext } from 'react-icons'
+import { useIsSmall } from '../hooks/useMediaQuery'
 
 export default function Sidebar({ open, handleSidebar }) {
+  const isSmall = useIsSmall()
+
+  const handleClose = () => {
+    if (isSmall) handleSidebar()
+  }
+
   return (
     <div className={open ? 'sidebar sidebar-open' : 'sidebar'}>
       <button onClick={() => handleSidebar()}>
@@ -17,15 +25,20 @@ export default function Sidebar({ open, handleSidebar }) {
 
       <ul className="navigation">
         <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          <a href="/#home">Home</a>
+          <HashLink to="/#home" onClick={() => handleClose()}>
+            Home
+          </HashLink>
         </li>
 
         <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          {/* <Link to="/portfolio">Portfolio</Link> */}
-          <a href="/#portfolio">Portfolio</a>
+          <HashLink to="/#portfolio" onClick={() => handleClose()}>
+            Portfolio
+          </HashLink>
         </li>
         <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={() => handleClose()}>
+            Contact
+          </Link>
         </li>
       </ul>
 

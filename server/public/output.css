@@ -16,14 +16,14 @@ body {
 }
 
 .content {
-  transition: transform 0.4s ease-in-out;
+  transition: margin-left 0.4s ease-in-out;
   margin-left: 100px;
   scroll-behavior: smooth;
 }
 
 .content-pushed {
-  transform: translateX(200px);
-  transition: transform 0.4s ease-in-out;
+  margin-left: 300px;
+  transition: margin-left 0.4s ease-in-out;
 }
 
 .fade {
@@ -47,6 +47,14 @@ li {
     opacity: 1;
   }
 }
+@media (max-width: 600px) {
+  .content {
+    margin-left: 0;
+  }
+  .content-pushed {
+    margin-left: 0;
+  }
+}
 .horizontal-header {
   display: flex;
   justify-content: space-between;
@@ -55,6 +63,11 @@ li {
   height: 100px;
   border-bottom: 1px solid #072ac8;
   padding-left: 2em;
+}
+.horizontal-header button {
+  background: none;
+  border: none;
+  outline: transparent;
 }
 .horizontal-header .title-container {
   display: flex;
@@ -78,8 +91,11 @@ li {
   font-weight: 800;
 }
 
-@media (max-width: 580px) {
-  .name-title {
+@media (max-width: 600px) {
+  .horizontal-header {
+    padding-right: 2em;
+  }
+  .horizontal-header .name-title {
     display: none;
   }
 }
@@ -164,12 +180,10 @@ li {
     order: 2;
     text-align: center;
   }
-  .hero-container .hero-content .social-container {
-    width: 500px;
-  }
   .hero-container .hero-image {
     padding-top: 5em;
     padding-bottom: 2em;
+    padding-right: 0;
     width: 100%;
     order: 1;
     display: flex;
@@ -190,6 +204,7 @@ li {
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0;
     padding-bottom: 5em;
   }
   .hero-container .hero-content {
@@ -201,11 +216,6 @@ li {
     order: 2;
     text-align: center;
   }
-  .hero-container .hero-content .social-container {
-    width: 420px;
-  }
-}
-@media (max-width: 650px) {
   .hero-container .hero-content .social-container {
     grid-template-columns: 1fr;
     place-items: center;
@@ -518,6 +528,7 @@ li {
   border-right: 1px solid #072ac8;
   background: #fdf8e1;
   transition: width 0.4s ease-in-out;
+  z-index: 10;
 }
 .sidebar button {
   background: none;
@@ -529,10 +540,14 @@ li {
   height: 30px;
 }
 .sidebar .navigation .nav-link {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   transform: translateX(-150%);
   font-size: 1.2rem;
   transition: transform 0.4s ease-in-out;
+}
+.sidebar .navigation .nav-link:hover {
+  transform: translateX(20px);
+  transition: transform 0.1s ease-in-out;
 }
 .sidebar .navigation .nav-link-visible {
   transform: translateX(0%);
@@ -551,6 +566,14 @@ li {
   width: 300px;
 }
 
+@media (max-width: 600px) {
+  .sidebar {
+    visibility: hidden;
+  }
+  .sidebar-open {
+    visibility: visible;
+  }
+}
 .single-project-container {
   padding: 3em;
   width: 100%;

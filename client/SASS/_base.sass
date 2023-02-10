@@ -11,16 +11,16 @@ body
   @include colors.color-scheme(colors.$scheme-default ...)
   font: 100% typography.$font-main
   font-size: 16px
-        
 
 .content
-    transition: transform 0.4s ease-in-out
+    transition: margin-left 0.4s ease-in-out
     margin-left: 100px
     scroll-behavior: smooth
 
 .content-pushed
-    transform: translateX(200px)
-    transition: transform 0.4s ease-in-out
+    margin-left: 300px
+    transition: margin-left 0.4s ease-in-out
+   
 
 .fade 
     animation: fade 1s ease-in
@@ -39,3 +39,9 @@ li
     100%
         opacity: 1
 
+@media (max-width: 600px) 
+    .content
+        margin-left: 0
+
+    .content-pushed
+        margin-left: 0

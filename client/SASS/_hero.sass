@@ -78,12 +78,10 @@
             order: 2
             text-align: center
 
-            .social-container
-                width: 500px
-
         .hero-image 
             padding-top: 5em
             padding-bottom: 2em
+            padding-right: 0
             width: 100%
             order: 1
             @include layout.flex-column-center()
@@ -101,6 +99,7 @@
         width: 100%
         display: flex
         flex-direction: column
+        padding: 0
         padding-bottom: 5em
 
         .hero-content 
@@ -110,13 +109,8 @@
             text-align: center
 
             .social-container
-                width: 420px
-
-@media (max-width: 650px) 
-    .hero-container 
-
-        .hero-content 
-
-            .social-container
                 grid-template-columns: 1fr
                 place-items: center
+
+
+            

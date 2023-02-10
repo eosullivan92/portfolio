@@ -15,6 +15,7 @@
     border-right: 1px solid colors.$accent-blue
     background: colors.$bg-cornsilk
     transition: width 0.4s ease-in-out
+    z-index: 10
 
 
     button
@@ -29,10 +30,14 @@
     .navigation
 
             .nav-link
-                margin-bottom: 2em
+                margin-bottom: 3em
                 transform: translateX(-150%)
                 font-size: 1.2rem
                 transition: transform 0.4s ease-in-out
+
+            .nav-link:hover
+                transform: translateX(20px)
+                transition: transform 0.1s ease-in-out
                 
                 
 
@@ -55,4 +60,10 @@
 
 .sidebar-open 
     width: 300px
+
+@media (max-width: 600px) 
+    .sidebar 
+        visibility: hidden
     
+    .sidebar-open 
+        visibility: visible

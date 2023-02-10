@@ -24,7 +24,7 @@ function App() {
     <div className={firstLoad ? `container fade` : `container`}>
       <Sidebar open={open} handleSidebar={handleSidebar} />
       <div className={open ? 'content content-pushed' : 'content'}>
-        <Header />
+        <Header open={open} handleSidebar={handleSidebar} />
         <Routes>
           <Route
             path="/"
