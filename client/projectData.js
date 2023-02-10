@@ -19,7 +19,8 @@ export const projectData = [
     name: 'The Lost Crates',
     subtitle: 'Full stack e-commerce platform',
     link: 'https://www.thelostcrates.co.nz/',
-    screenshot: '/project-images/TLC.png',
+    screenshot: '/project-images/TLC.webp',
+    screenshotmobile: '/project-images/TLC-m.webp',
     repository: 'https://github.com/eosullivan92/lost-crates',
     stack: {
       Javascript: <SiJavascript />,
@@ -42,7 +43,8 @@ export const projectData = [
     name: 'If You Like',
     subtitle: 'A Reddit-like music forum',
     link: 'https://if-you-like-production.up.railway.app/',
-    screenshot: '/project-images/ifyoulike.png',
+    screenshot: '/project-images/ifyoulike.webp',
+    screenshotmobile: '/project-images/ifyoulike-m.webp',
     repository: 'https://github.com/eosullivan92/If-you-like-v2',
 
     stack: {
@@ -67,7 +69,8 @@ export const projectData = [
     name: 'Colorful Life',
     subtitle: 'A color palette generator',
     link: 'https://colorful-life-production.up.railway.app/',
-    screenshot: '/project-images/colorful.png',
+    screenshot: '/project-images/colorful.webp',
+    screenshotmobile: '/project-images/colorful-m.webp',
     repository: 'https://github.com/eosullivan92/color-palette-generator',
     stack: {
       React: <SiReact />,
@@ -88,8 +91,9 @@ export const projectData = [
     id: 4,
     name: 'Plantasia',
     subtitle: 'Your houseplants favourite app',
-    link: 'Not currently deployed',
-    screenshot: '/project-images/plantasia-2.png',
+    link: 'Not currently deployed, apologies for bad image quality',
+    screenshot: '/project-images/plantasia-2.webp',
+    screenshotmobile: null,
     stack: {
       React: <SiReact />,
       JavaScript: <SiJavascript />,

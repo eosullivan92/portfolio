@@ -28,7 +28,15 @@ export default function Project({ project }) {
         {project.link}
       </a>
       <div className="image-container">
-        <img src={project.screenshot} alt="" />
+        <picture>
+          <source srcSet={project.screenshot} media="(min-width: 600px)" />
+          <img
+            src={project.screenshotmobile || project.screenshot}
+            alt="project screenshot"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
       </div>
     </div>
   )

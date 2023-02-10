@@ -14,7 +14,7 @@
 
 
     h2
-        padding: 2em
+        padding: 1.5em
         color: colors.$accent-blue
 
     .projects-grid
@@ -34,10 +34,10 @@
             h3
                 padding: 20px 0
                 padding-left: 30px
-                font-size: 18px
+                font-size: 1.1rem
             
             .project-subtitle
-                font-size: 22px
+                font-size: 1.3rem
                 padding-left: 30px
                 color: colors.$tertiary-dark
 
@@ -55,16 +55,20 @@
                 width: 100%
                 height: 100%
 
-                img 
-                    width: 90%
-                    transition: all 0.3s ease-out
-                    border-radius: 3px
+                picture
+
+                    img 
+                        width: 90%
+                        transition: all 0.3s ease-out
+                        border-radius: 3px
+                        margin: 0 auto
+                        display: block
 
 
-                img:last-of-type
-                    aspect-ratio: 16 / 9
-                    object-fit: cover
-                    object-position: top
+                    img:last-of-type
+                        aspect-ratio: 16 / 9
+                        object-fit: cover
+                        object-position: top
 
         .project:first-of-type
             border-right: 1px solid colors.$accent-blue

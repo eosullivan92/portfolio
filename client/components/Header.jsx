@@ -12,7 +12,7 @@ export default function Header({ open, handleSidebar }) {
         {isSmall && !open && (
           <button onClick={() => handleSidebar()}>
             <IconContext.Provider
-              value={{ style: { fontSize: '2rem' }, color: '#072ac8' }}
+              value={{ style: { fontSize: '1.7rem' }, color: '#072ac8' }}
             >
               {open ? <TfiClose /> : <SlMenu />}
             </IconContext.Provider>

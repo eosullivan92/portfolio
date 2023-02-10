@@ -1,11 +1,13 @@
 @use 'colors'
+@use 'layout'
+
 
 .sidebar
     height: 100vh
     position: fixed
     top: 0
     left: 0
-    width: 100px
+    width: layout.$sidebar
     padding-left: 2em
     padding-top: 2em
     display: flex
@@ -24,15 +26,12 @@
         outline: transparent
         width: 30px
 
-    .menu-icon
-        height: 30px
-
     .navigation
 
             .nav-link
                 margin-bottom: 3em
                 transform: translateX(-150%)
-                font-size: 1.2rem
+                font-size: 1.1rem
                 transition: transform 0.4s ease-in-out
 
             .nav-link:hover
@@ -44,14 +43,13 @@
             .nav-link-visible
                 transform: translateX(0%)
 
-
     
     .social-icons
         display: flex
         flex-direction: column
         gap: 1.5em
         padding-bottom: 3em
-
+        
         a
 
             img
@@ -59,7 +57,7 @@
 
 
 .sidebar-open 
-    width: 300px
+    width: layout.$sidebar-open
 
 @media (max-width: 600px) 
     .sidebar 

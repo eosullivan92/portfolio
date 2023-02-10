@@ -2,6 +2,22 @@
   font-family: "Powerr";
   src: url("./typography/PowerrExtraBold.ttf");
 }
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./typography/source-sans-pro-v21-latin-regular.woff2") format("woff2"), url("./typography/source-sans-pro-v21-latin-regular.woff") format("woff");
+}
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./typography/source-sans-pro-v21-latin-700.woff2") format("woff2"), url("./typography/source-sans-pro-v21-latin-700.woff") format("woff");
+}
 * {
   padding: 0;
   margin: 0;
@@ -11,14 +27,15 @@
 body {
   background: #fdf8e1;
   color: #072ac8;
-  font: 100% Poppins, sans-serif;
-  font-size: 16px;
+  font: 100% source-sans-pro-700, sans-serif;
+  font-size: 14px;
 }
 
 .content {
   transition: margin-left 0.4s ease-in-out;
   margin-top: 0;
-  margin-left: 100px;
+  margin-left: 90px;
+  padding-bottom: 3em;
   scroll-behavior: smooth;
 }
 
@@ -79,9 +96,9 @@ li {
   gap: 1em;
 }
 .horizontal-header .title-container .logo-title {
-  font: 100% "Powerr", Poppins, sans-serif;
+  font: 100% "Powerr", source-sans-pro-700, sans-serif;
   color: #072ac8;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 28px;
 }
 .horizontal-header a .block-text {
@@ -92,7 +109,7 @@ li {
   color: #fdf8e1;
   text-align: center;
   vertical-align: middle;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 @media (max-width: 600px) {
@@ -105,7 +122,7 @@ li {
   }
 }
 .hero-container {
-  padding: 140px 3em 3em 3em;
+  padding: 130px 3em 3em 3em;
   min-height: 70vh;
   width: 100%;
   display: flex;
@@ -120,15 +137,16 @@ li {
   justify-content: center;
 }
 .hero-container .hero-content .title {
-  font: 100% "Powerr", Poppins, sans-serif;
+  font: 100% "Powerr", source-sans-pro-700, sans-serif;
   color: #072ac8;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 48px;
   letter-spacing: 2px;
 }
 .hero-container .hero-content .about {
   width: 85%;
   padding: 1em 0;
+  line-height: 1.8;
   color: #515151;
 }
 .hero-container .hero-content .about p {
@@ -139,10 +157,11 @@ li {
 }
 .hero-container .hero-content .social-container {
   width: 100%;
-  padding-top: 1em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 10px;
+  padding: 2em 0em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2em;
 }
 .hero-container .hero-content .social-container .social-item {
   display: flex;
@@ -162,8 +181,8 @@ li {
   align-items: center;
 }
 .hero-container .hero-image img {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -183,6 +202,9 @@ li {
     align-items: center;
     order: 2;
     text-align: center;
+  }
+  .hero-container .hero-content .social-container {
+    justify-content: center;
   }
   .hero-container .hero-image {
     padding-top: 5em;
@@ -220,8 +242,8 @@ li {
     text-align: center;
   }
   .hero-container .hero-content .social-container {
-    grid-template-columns: 1fr;
-    place-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .projects-container {
@@ -233,7 +255,7 @@ li {
   scroll-behavior: smooths;
 }
 .projects-container h2 {
-  padding: 2em;
+  padding: 1.5em;
   color: #072ac8;
 }
 .projects-container .projects-grid {
@@ -273,10 +295,10 @@ li {
 .projects-container .projects-grid .project h3 {
   padding: 20px 0;
   padding-left: 30px;
-  font-size: 18px;
+  font-size: 1.1rem;
 }
 .projects-container .projects-grid .project .project-subtitle {
-  font-size: 22px;
+  font-size: 1.3rem;
   padding-left: 30px;
   color: #515151;
 }
@@ -294,12 +316,14 @@ li {
   width: 100%;
   height: 100%;
 }
-.projects-container .projects-grid .project .image-container img {
+.projects-container .projects-grid .project .image-container picture img {
   width: 90%;
   transition: all 0.3s ease-out;
   border-radius: 3px;
+  margin: 0 auto;
+  display: block;
 }
-.projects-container .projects-grid .project .image-container img:last-of-type {
+.projects-container .projects-grid .project .image-container picture img:last-of-type {
   aspect-ratio: 16/9;
   object-fit: cover;
   object-position: top;
@@ -376,7 +400,7 @@ li {
 }
 
 .contact-section {
-  padding: 140px 3em 3em 3em;
+  padding: 130px 3em 3em 3em;
   color: #515151;
 }
 .contact-section h2 {
@@ -427,7 +451,7 @@ li {
 .contact-section .contact-container .contact-form form .input-control input {
   width: 100%;
   height: 100%;
-  font: 100% Poppins, sans-serif;
+  font: 100% source-sans-pro-700, sans-serif;
   font-size: 16px;
   outline: transparent;
   border: none;
@@ -461,7 +485,7 @@ li {
   margin-bottom: 20px;
 }
 .contact-section .contact-container .contact-form form .text-control textarea {
-  font: 100% Poppins, sans-serif;
+  font: 100% source-sans-pro-700, sans-serif;
   width: 100%;
   height: auto;
   outline: none;
@@ -505,7 +529,7 @@ li {
 
 @media (max-width: 1000px) {
   .contact-section {
-    padding: 140px 1em 1em 1em;
+    padding: 130px 1em 1em 1em;
   }
   .contact-section .contact-container {
     height: auto;
@@ -530,7 +554,7 @@ li {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100px;
+  width: 90px;
   padding-left: 2em;
   padding-top: 2em;
   display: flex;
@@ -548,13 +572,10 @@ li {
   outline: transparent;
   width: 30px;
 }
-.sidebar .menu-icon {
-  height: 30px;
-}
 .sidebar .navigation .nav-link {
   margin-bottom: 3em;
   transform: translateX(-150%);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: transform 0.4s ease-in-out;
 }
 .sidebar .navigation .nav-link:hover {
@@ -602,10 +623,10 @@ li {
 }
 .single-project-container .project-header-flex .project-header .project-name {
   font-size: 3rem;
-  font-family: "Powerr", Poppins, sans-serif;
+  font-family: "Powerr", source-sans-pro-700, sans-serif;
 }
 .single-project-container .project-header-flex .project-header .project-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #515151;
 }
 .single-project-container .project-header-flex .next-project {
@@ -618,8 +639,8 @@ li {
   outline: transparent;
   color: #072ac8;
   font-size: 1rem;
-  width: 150px;
-  height: 70px;
+  width: 140px;
+  height: 60px;
   padding: 10px 10px;
 }
 .single-project-container .project-flex {
@@ -629,7 +650,7 @@ li {
   width: 40%;
   color: #515151;
   font-size: 1rem;
-  line-height: 2;
+  line-height: 1.8;
 }
 .single-project-container .project-flex .project-info ul li {
   list-style: initial;
@@ -656,19 +677,18 @@ li {
   padding-top: 1em;
 }
 .single-project-container .project-flex .project-info .bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 .single-project-container .project-flex .project-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 60%;
 }
-.single-project-container .project-flex .project-image-container .project-image {
+.single-project-container .project-flex .project-image-container picture .project-image {
+  display: block;
+  margin: 0 auto;
   width: 80%;
 }
-.single-project-container .project-flex .project-image-container .plantasia-img {
-  aspect-ratio: 1.2/1;
+.single-project-container .project-flex .project-image-container picture .plantasia-img {
+  max-width: 700px;
   object-fit: cover;
   object-position: top;
 }
@@ -690,24 +710,27 @@ li {
   order: 1;
   width: 100%;
 }
+.single-project-container .project-flex .project-image-container .project-image {
+  width: 70%;
+}
 
 @media (max-width: 850px) {
-  .project-header-flex {
+  .single-project-container .project-header-flex {
     flex-direction: column;
     gap: 2em;
+  }
+  .single-project-container .project-flex .project-image-container {
+    order: 1;
+    width: 100%;
+  }
+  .single-project-container .project-flex .project-image-container picture .project-image {
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
   .single-project-container {
     padding: 1em;
     padding-top: 130px;
-  }
-  .single-project-container .project-flex .project-image-container {
-    order: 1;
-    width: 100%;
-  }
-  .single-project-container .project-flex .project-image-container .project-image {
-    width: 95%;
   }
 }
 

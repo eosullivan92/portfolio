@@ -59,10 +59,8 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "devicon": "^2.15.1",
     "emailjs-com": "^3.2.0",
     "express": "^4.17.2",
-    "framer-motion": "^6.5.1",
     "react-icons": "^4.7.1",
     "react-router-hash-link": "^2.4.3"
   },

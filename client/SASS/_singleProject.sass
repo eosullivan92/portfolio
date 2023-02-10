@@ -1,9 +1,10 @@
 @use 'colors'
 @use 'typography'
+@use 'layout'
 
 .single-project-container
     padding: 3em
-    padding-top: 130px
+    padding-top: layout.$header-p
     width: 100%
 
     .project-header-flex
@@ -22,7 +23,7 @@
                 font-family: typography.$font-hero
 
             .project-subtitle
-                font-size: 1.5rem
+                font-size: 1.3rem
                 color: colors.$tertiary-dark
 
         .next-project
@@ -35,8 +36,8 @@
             outline: transparent
             color: colors.$accent-blue
             font-size: 1rem
-            width: 150px
-            height: 70px
+            width: 140px
+            height: 60px
             padding: 10px 10px
 
     .project-flex
@@ -46,7 +47,7 @@
             width: 40%
             color: colors.$tertiary-dark
             font-size: 1rem
-            line-height: 2
+            line-height: 1.8
 
             ul
 
@@ -75,23 +76,24 @@
                 padding-top: 1em
         
             .bold
-                font-weight: 600
+                font-weight: 700
 
             
             
         .project-image-container
-            display: flex
-            justify-content: center
-            align-items: center
             width: 60%
-        
-            .project-image
-                width: 80%
 
-            .plantasia-img
-                aspect-ratio: 1.2 / 1
-                object-fit: cover
-                object-position: top
+            picture
+        
+                .project-image
+                    display: block
+                    margin: 0 auto
+                    width: 80%
+
+                .plantasia-img
+                    max-width: 700px
+                    object-fit: cover
+                    object-position: top
 
 
 @media (max-width: 1650px)
@@ -115,10 +117,26 @@
             order: 1
             width: 100%
 
+            .project-image
+                width: 70%
+
 @media (max-width: 850px)
-    .project-header-flex
-        flex-direction: column
-        gap: 2em
+    .single-project-container
+
+        .project-header-flex
+            flex-direction: column
+            gap: 2em
+
+        .project-flex
+
+            .project-image-container
+                    order: 1
+                    width: 100%
+
+                    picture 
+
+                        .project-image
+                            width: 100%
         
 
 @media (max-width: 500px)
@@ -127,13 +145,5 @@
         padding: 1em
         padding-top: 130px
         
-        .project-flex
-            
-            .project-image-container
-                    order: 1
-                    width: 100%
-
-                    .project-image
-                        width: 95%
 
             

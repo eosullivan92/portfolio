@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
 import { SlMenu } from 'react-icons/sl'
+import { SiLinkedin, SiGithub } from 'react-icons/si'
 import { TfiClose } from 'react-icons/tfi'
 import { IconContext } from 'react-icons'
 import { useIsSmall } from '../hooks/useMediaQuery'
@@ -17,7 +18,7 @@ export default function Sidebar({ open, handleSidebar }) {
     <div className={open ? 'sidebar sidebar-open' : 'sidebar'}>
       <button onClick={() => handleSidebar()}>
         <IconContext.Provider
-          value={{ style: { fontSize: '2rem' }, color: '#072ac8' }}
+          value={{ style: { fontSize: '1.7rem' }, color: '#072ac8' }}
         >
           {open ? <TfiClose /> : <SlMenu />}
         </IconContext.Provider>
@@ -48,7 +49,11 @@ export default function Sidebar({ open, handleSidebar }) {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/icons/linkedin.png" alt="linkedin" />
+          <IconContext.Provider
+            value={{ style: { fontSize: '1.5rem' }, color: '#072ac8' }}
+          >
+            <SiLinkedin />
+          </IconContext.Provider>
         </a>
 
         <a
@@ -56,7 +61,11 @@ export default function Sidebar({ open, handleSidebar }) {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/icons/github.png" alt="github" />
+          <IconContext.Provider
+            value={{ style: { fontSize: '1.5rem' }, color: '#072ac8' }}
+          >
+            <SiGithub />
+          </IconContext.Provider>
         </a>
       </div>
     </div>

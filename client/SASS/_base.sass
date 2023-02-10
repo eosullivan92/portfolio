@@ -10,16 +10,17 @@
 body 
   @include colors.color-scheme(colors.$scheme-default ...)
   font: 100% typography.$font-main
-  font-size: 16px
+  font-size: 14px
 
 .content
     transition: margin-left 0.4s ease-in-out
     margin-top: 0
-    margin-left: 100px
+    margin-left: layout.$sidebar
+    padding-bottom: 3em
     scroll-behavior: smooth
 
 .content-pushed
-    margin-left: 300px
+    margin-left: layout.$sidebar-open
     transition: margin-left 0.4s ease-in-out
    
 
