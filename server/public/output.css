@@ -17,6 +17,7 @@ body {
 
 .content {
   transition: margin-left 0.4s ease-in-out;
+  margin-top: 0;
   margin-left: 100px;
   scroll-behavior: smooth;
 }
@@ -59,10 +60,13 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100px;
+  width: calc(100% - 100px);
+  height: 80px;
   border-bottom: 1px solid #072ac8;
+  background: #fdf8e1;
   padding-left: 2em;
+  position: fixed;
+  z-index: 9;
 }
 .horizontal-header button {
   background: none;
@@ -81,8 +85,8 @@ li {
   font-size: 28px;
 }
 .horizontal-header a .block-text {
-  height: 100px;
-  line-height: 100px;
+  height: 80px;
+  line-height: 80px;
   width: 200px;
   background-color: #072ac8;
   color: #fdf8e1;
@@ -94,13 +98,14 @@ li {
 @media (max-width: 600px) {
   .horizontal-header {
     padding-right: 2em;
+    width: 100%;
   }
   .horizontal-header .name-title {
     display: none;
   }
 }
 .hero-container {
-  padding: 3em;
+  padding: 140px 3em 3em 3em;
   min-height: 70vh;
   width: 100%;
   display: flex;
@@ -168,8 +173,7 @@ li {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 1em;
-    padding-bottom: 5em;
+    padding: 130px 1em 3em 1em;
   }
   .hero-container .hero-content {
     width: 100%;
@@ -204,8 +208,7 @@ li {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0;
-    padding-bottom: 5em;
+    padding: 130px 0em 3em 0em;
   }
   .hero-container .hero-content {
     width: 100%;
@@ -227,7 +230,7 @@ li {
   width: 100%;
   padding-bottom: 5em;
   border-top: 1px solid #072ac8;
-  scroll-behavior: smooth;
+  scroll-behavior: smooths;
 }
 .projects-container h2 {
   padding: 2em;
@@ -236,6 +239,8 @@ li {
 .projects-container .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 50%);
+  margin-left: 1px;
+  margin-right: 1px;
 }
 .projects-container .projects-grid .project {
   position: relative;
@@ -316,13 +321,17 @@ li {
   }
 }
 @media (max-width: 580px) {
-  .project {
-    aspect-ratio: 1.2/1;
+  .projects-container .projects-grid .project {
+    aspect-ratio: 1.6/1;
   }
-  .project .project-subtitle {
+  .projects-container .projects-grid .project h3 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .projects-container .projects-grid .project .project-subtitle {
     display: none;
   }
-  .project .project-url {
+  .projects-container .projects-grid .project .project-url {
     display: none;
   }
 }
@@ -366,56 +375,56 @@ li {
   }
 }
 
-#contact {
-  margin: 3em;
+.contact-section {
+  padding: 140px 3em 3em 3em;
   color: #515151;
 }
-#contact h2 {
+.contact-section h2 {
   padding: 0;
   margin: 0;
   color: #072ac8;
 }
-#contact .contact-container {
+.contact-section .contact-container {
   min-height: 50vh;
   width: 100%;
   padding-top: 2em;
   display: flex;
 }
-#contact .contact-container .contact-content {
+.contact-section .contact-container .contact-content {
   width: 50%;
   padding-top: 4em;
 }
-#contact .contact-container .contact-content .cta {
+.contact-section .contact-container .contact-content .cta {
   font-size: 22px;
 }
-#contact .contact-container .contact-content ul {
+.contact-section .contact-container .contact-content ul {
   padding: 0;
   padding-top: 2em;
 }
-#contact .contact-container .contact-content ul li {
+.contact-section .contact-container .contact-content ul li {
   padding-top: 1em;
 }
-#contact .contact-container .contact-content ul li span {
+.contact-section .contact-container .contact-content ul li span {
   position: relative;
   padding-left: 1em;
   bottom: 5px;
 }
-#contact .contact-container .contact-form {
+.contact-section .contact-container .contact-form {
   width: 50%;
   max-width: 650px;
 }
-#contact .contact-container .contact-form form {
+.contact-section .contact-container .contact-form form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#contact .contact-container .contact-form form .input-control {
+.contact-section .contact-container .contact-form form .input-control {
   position: relative;
   width: 100%;
   height: 50px;
   margin-bottom: 30px;
 }
-#contact .contact-container .contact-form form .input-control input {
+.contact-section .contact-container .contact-form form .input-control input {
   width: 100%;
   height: 100%;
   font: 100% Poppins, sans-serif;
@@ -427,16 +436,16 @@ li {
   background: hsla(49deg, 88%, 99%, 0.8);
   color: #515151;
 }
-#contact .contact-container .contact-form form .input-control input:not(:placeholder-shown) + label,
-#contact .contact-container .contact-form form .input-control input:focus + label,
-#contact .contact-container .contact-form form .input-control input:valid + label {
+.contact-section .contact-container .contact-form form .input-control input:not(:placeholder-shown) + label,
+.contact-section .contact-container .contact-form form .input-control input:focus + label,
+.contact-section .contact-container .contact-form form .input-control input:valid + label {
   font-size: 12px;
   top: -13px;
   background: #fdf8e1;
   padding: 5px;
   color: #072ac8;
 }
-#contact .contact-container .contact-form form .input-control label {
+.contact-section .contact-container .contact-form form .input-control label {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -446,12 +455,12 @@ li {
   pointer-events: none;
   transition: all 0.4s ease;
 }
-#contact .contact-container .contact-form form .text-control {
+.contact-section .contact-container .contact-form form .text-control {
   position: relative;
   width: 100%;
   margin-bottom: 20px;
 }
-#contact .contact-container .contact-form form .text-control textarea {
+.contact-section .contact-container .contact-form form .text-control textarea {
   font: 100% Poppins, sans-serif;
   width: 100%;
   height: auto;
@@ -462,16 +471,16 @@ li {
   background: hsla(49deg, 88%, 99%, 0.8);
   color: #515151;
 }
-#contact .contact-container .contact-form form .text-control textarea:not(:placeholder-shown) + label,
-#contact .contact-container .contact-form form .text-control textarea:focus + label,
-#contact .contact-container .contact-form form .text-control textarea:valid + label {
+.contact-section .contact-container .contact-form form .text-control textarea:not(:placeholder-shown) + label,
+.contact-section .contact-container .contact-form form .text-control textarea:focus + label,
+.contact-section .contact-container .contact-form form .text-control textarea:valid + label {
   font-size: 12px;
   top: -25px;
   background: #fdf8e1;
   padding: 5px;
   color: #072ac8;
 }
-#contact .contact-container .contact-form form .text-control label {
+.contact-section .contact-container .contact-form form .text-control label {
   position: absolute;
   top: 5%;
   left: 10px;
@@ -481,7 +490,7 @@ li {
   pointer-events: none;
   transition: all 0.4s ease;
 }
-#contact .contact-container .contact-form form button {
+.contact-section .contact-container .contact-form form button {
   background: #072ac8;
   color: #fdf8e1;
   text-align: center;
@@ -494,8 +503,11 @@ li {
   cursor: pointer;
 }
 
-@media (max-width: 860px) {
-  .contact-container {
+@media (max-width: 1000px) {
+  .contact-section {
+    padding: 140px 1em 1em 1em;
+  }
+  .contact-section .contact-container {
     height: auto;
     width: 100%;
     padding-top: 0em;
@@ -503,11 +515,11 @@ li {
     flex-direction: column;
     padding-bottom: 5em;
   }
-  .contact-container .contact-form {
+  .contact-section .contact-container .contact-form {
     width: 100%;
     order: 2;
   }
-  .contact-container .contact-content {
+  .contact-section .contact-container .contact-content {
     width: 100%;
     order: 1;
     padding-bottom: 3em;
@@ -576,6 +588,7 @@ li {
 }
 .single-project-container {
   padding: 3em;
+  padding-top: 130px;
   width: 100%;
 }
 .single-project-container .project-header-flex {
@@ -645,14 +658,57 @@ li {
 .single-project-container .project-flex .project-info .bold {
   font-weight: 600;
 }
-.single-project-container .project-flex .project-image {
+.single-project-container .project-flex .project-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60%;
 }
-.single-project-container .project-flex .project-image img {
+.single-project-container .project-flex .project-image-container .project-image {
   width: 80%;
+}
+.single-project-container .project-flex .project-image-container .plantasia-img {
+  aspect-ratio: 1.2/1;
+  object-fit: cover;
+  object-position: top;
+}
+
+.single-project-container .project-flex {
+  padding-top: 3em;
+  flex-direction: column;
+  gap: 3em;
+  width: 100%;
+}
+.single-project-container .project-flex .project-info {
+  order: 2;
+  width: 100%;
+}
+.single-project-container .project-flex .project-info .stack-container {
+  justify-content: center;
+}
+.single-project-container .project-flex .project-image-container {
+  order: 1;
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .project-header-flex {
+    flex-direction: column;
+    gap: 2em;
+  }
+}
+@media (max-width: 500px) {
+  .single-project-container {
+    padding: 1em;
+    padding-top: 130px;
+  }
+  .single-project-container .project-flex .project-image-container {
+    order: 1;
+    width: 100%;
+  }
+  .single-project-container .project-flex .project-image-container .project-image {
+    width: 95%;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

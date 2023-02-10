@@ -1,8 +1,8 @@
 @use 'colors'
 @use 'typography'
 
-#contact
-    margin: 3em
+.contact-section
+    padding: 140px 3em 3em 3em
     color: colors.$tertiary-dark
 
     h2
@@ -140,21 +140,24 @@
                     cursor: pointer
 
 
-@media (max-width: 860px )
-    .contact-container
-        height: auto
-        width: 100%
-        padding-top: 0em
-        display: flex
-        flex-direction: column
-        padding-bottom: 5em
-
-        .contact-form
+@media (max-width: 1000px )
+    .contact-section
+        padding: 140px 1em 1em 1em
+            
+        .contact-container
+            height: auto
             width: 100%
-            order: 2
+            padding-top: 0em
+            display: flex
+            flex-direction: column
+            padding-bottom: 5em
+
+            .contact-form
+                width: 100%
+                order: 2
 
 
-        .contact-content
-            width: 100%
-            order: 1
-            padding-bottom: 3em
+            .contact-content
+                width: 100%
+                order: 1
+                padding-bottom: 3em

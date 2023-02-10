@@ -10,7 +10,7 @@ export default function SocialLinks() {
           rel="noreferrer"
         >
           <div className="social-item">
-            <img src="/linkedin.png" alt="linkedin" />
+            <img src="/icons/linkedin.png" alt="linkedin" />
             <p className="url">linkedin/eosullivan9</p>
           </div>
         </a>
@@ -21,7 +21,7 @@ export default function SocialLinks() {
           rel="noreferrer"
         >
           <div className="social-item">
-            <img src="/github.png" alt="github" />
+            <img src="/icons/github.png" alt="github" />
             <p className="url">github/esosullivan92</p>
           </div>
         </a>

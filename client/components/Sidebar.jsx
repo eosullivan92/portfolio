@@ -48,7 +48,7 @@ export default function Sidebar({ open, handleSidebar }) {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/linkedin.png" alt="linkedin" />
+          <img src="/icons/linkedin.png" alt="linkedin" />
         </a>
 
         <a
@@ -56,7 +56,7 @@ export default function Sidebar({ open, handleSidebar }) {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/github.png" alt="github" />
+          <img src="/icons/github.png" alt="github" />
         </a>
       </div>
     </div>

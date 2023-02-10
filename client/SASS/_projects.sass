@@ -10,7 +10,7 @@
     width: 100%
     padding-bottom: 5em
     border-top: 1px solid colors.$accent-blue
-    scroll-behavior: smooth
+    scroll-behavior: smooths 
 
 
     h2
@@ -20,6 +20,8 @@
     .projects-grid
         display: grid
         grid-template-columns: repeat(2, 50%)
+        margin-left: 1px
+        margin-right: 1px
 
         .project
             position: relative
@@ -80,13 +82,21 @@
     
 @media (max-width: 580px) 
 
-    .project
-        aspect-ratio: 1.2 / 1
-        
-        .project-subtitle
-            display: none
+    .projects-container 
 
-        .project-url 
-            display: none
+        .projects-grid
+
+            .project
+                aspect-ratio: 1.6 / 1
+
+                h3
+                    padding-bottom: 0
+                    margin-bottom: 0
+                
+                .project-subtitle
+                    display: none
+
+                .project-url 
+                    display: none
 
 

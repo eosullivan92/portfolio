@@ -19,7 +19,7 @@ export const projectData = [
     name: 'The Lost Crates',
     subtitle: 'Full stack e-commerce platform',
     link: 'https://www.thelostcrates.co.nz/',
-    screenshot: '/TLC.png',
+    screenshot: '/project-images/TLC.png',
     repository: 'https://github.com/eosullivan92/lost-crates',
     stack: {
       Javascript: <SiJavascript />,
@@ -30,7 +30,7 @@ export const projectData = [
       PostGres: <SiPostgresql />,
     },
     description:
-      'Full stack e-commerce project where users can add/remove to cart and place orders. Orders are saved in a database, and can be fetched with an order ID. State on the front end is managed using Redux and will persist via local storage.',
+      'A full stack e-commerce project where users can add/remove to cart and place orders. Orders are saved in a database, and can be fetched with an order ID. State on the front end is managed using Redux and will persist via local storage.',
     reflections: [
       'I started this project to sharpen my backend skills, utilising multiple database tables and storing order information. This gave me a lot of practice making joins across tables and manipulating data to get it ready for the frontend.',
       'I am enjoying getting familiar with Redux to handle more complicated application states',
@@ -42,7 +42,7 @@ export const projectData = [
     name: 'If You Like',
     subtitle: 'A Reddit-like music forum',
     link: 'https://if-you-like-production.up.railway.app/',
-    screenshot: '/ifyoulike.png',
+    screenshot: '/project-images/ifyoulike.png',
     repository: 'https://github.com/eosullivan92/If-you-like-v2',
 
     stack: {
@@ -67,7 +67,7 @@ export const projectData = [
     name: 'Colorful Life',
     subtitle: 'A color palette generator',
     link: 'https://colorful-life-production.up.railway.app/',
-    screenshot: '/colorful.png',
+    screenshot: '/project-images/colorful.png',
     repository: 'https://github.com/eosullivan92/color-palette-generator',
     stack: {
       React: <SiReact />,
@@ -89,7 +89,7 @@ export const projectData = [
     name: 'Plantasia',
     subtitle: 'Your houseplants favourite app',
     link: 'Not currently deployed',
-    screenshot: '/plantasia-2.png',
+    screenshot: '/project-images/plantasia-2.png',
     stack: {
       React: <SiReact />,
       JavaScript: <SiJavascript />,

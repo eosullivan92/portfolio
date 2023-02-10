@@ -73,8 +73,14 @@ export default function SingleProject() {
                 ))}
               </ul>
             </div>
-            <div className="project-image">
-              <img src={project.screenshot} alt="" />
+            <div className="project-image-container">
+              <img
+                className={
+                  id == 4 ? 'project-image plantasia-img' : 'project-image'
+                }
+                src={project.screenshot}
+                alt=""
+              />
             </div>
           </div>
         </div>

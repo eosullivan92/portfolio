@@ -4,7 +4,7 @@ export default function HeroImage() {
   return (
     <>
       <div className="hero-image">
-        <img src="/profile.jpg" alt="headshot" />
+        <img src="/project-images/profile.jpg" alt="headshot" />
       </div>
     </>
   )
