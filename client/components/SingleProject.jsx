@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { IconContext } from 'react-icons'
 import { projectData } from '../projectData'
 import { RxArrowRight } from 'react-icons/rx'
 import StackIconTag from './StackIconTag'
@@ -46,15 +47,19 @@ export default function SingleProject() {
           <div className="project-flex">
             <div className="project-info">
               <div className="stack-container">
-                {Object.keys(project.stack).map((key) => {
-                  return (
-                    <StackIconTag
-                      key={key}
-                      name={key}
-                      Icon={project.stack[key]}
-                    />
-                  )
-                })}
+                <IconContext.Provider
+                  value={{ style: { fontSize: '2.5rem', color: '#072ac8' } }}
+                >
+                  {Object.keys(project.stack).map((key) => {
+                    return (
+                      <StackIconTag
+                        key={key}
+                        name={key}
+                        Icon={project.stack[key]}
+                      />
+                    )
+                  })}
+                </IconContext.Provider>
               </div>
 
               <p>{project.description}</p>

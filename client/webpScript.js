@@ -1,5 +1,5 @@
 // This is needed to use the "$" symbol and make the overall code less verbose
-// const $ = document.querySelector.bind(document)
+const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 // Load this script after everything else (document is ready)

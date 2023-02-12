@@ -7,59 +7,48 @@ export default function SocialLinks() {
   return (
     <>
       <div className="social-container">
-        <a
-          href="https://www.linkedin.com/in/eosullivan9/"
-          target="_blank"
-          rel="noreferrer"
+        <IconContext.Provider
+          value={{ style: { fontSize: '1.5rem' }, color: '#072ac8' }}
         >
-          <div className="social-item">
-            <IconContext.Provider
-              value={{ style: { fontSize: '1.5rem' }, color: '#072ac8' }}
-            >
+          <a
+            href="https://www.linkedin.com/in/eosullivan9/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="social-item">
               <SiLinkedin />
-            </IconContext.Provider>
-            <p className="url">linkedin/eosullivan9</p>
-          </div>
-        </a>
+              <p className="url">linkedin/eosullivan9</p>
+            </div>
+          </a>
 
-        <a
-          href="https://github.com/eosullivan92"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="social-item">
-            <IconContext.Provider
-              value={{ style: { fontSize: '1.5rem' }, color: '#072ac8' }}
-            >
+          <a
+            href="https://github.com/eosullivan92"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="social-item">
               <SiGithub />
-            </IconContext.Provider>
-            <p className="url">github/esosullivan92</p>
-          </div>
-        </a>
-        <a href="/EamonnOsullivan-CV.pdf" download="Eamonn O'Sullivan CV">
-          <div className="social-item">
-            <IconContext.Provider
-              value={{ style: { fontSize: '1.5rem' }, color: '#072ac8' }}
-            >
+              <p className="url">github/esosullivan92</p>
+            </div>
+          </a>
+          <a href="/EamonnOsullivan-CV.pdf" download="Eamonn O'Sullivan CV">
+            <div className="social-item">
               <HiOutlineDocumentDownload />
-            </IconContext.Provider>
-            <p className="url">Download CV</p>
-          </div>
-        </a>
-        <a
-          href="https://github.com/eosullivan92/portfolio"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="social-item">
-            <IconContext.Provider
-              value={{ style: { fontSize: '1.5rem' }, color: '#072ac8' }}
-            >
+              <p className="url">Download CV</p>
+            </div>
+          </a>
+          <a
+            href="https://github.com/eosullivan92/portfolio"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="social-item">
               <HiCode />
-            </IconContext.Provider>
-            <p className="url">Source Code</p>
-          </div>
-        </a>
+
+              <p className="url">Source Code</p>
+            </div>
+          </a>
+        </IconContext.Provider>
       </div>
     </>
   )

@@ -16,58 +16,50 @@ export default function Sidebar({ open, handleSidebar }) {
 
   return (
     <div className={open ? 'sidebar sidebar-open' : 'sidebar'}>
-      <button onClick={() => handleSidebar()}>
-        <IconContext.Provider
-          value={{ style: { fontSize: '1.7rem' }, color: '#072ac8' }}
-        >
+      <IconContext.Provider
+        value={{ style: { fontSize: '1.7rem' }, color: '#072ac8' }}
+      >
+        <button onClick={() => handleSidebar()}>
           {open ? <TfiClose /> : <SlMenu />}
-        </IconContext.Provider>
-      </button>
+        </button>
 
-      <ul className="navigation">
-        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          <HashLink to="/#home" onClick={() => handleClose()}>
-            Home
-          </HashLink>
-        </li>
+        <ul className="navigation">
+          <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
+            <HashLink to="/#home" onClick={() => handleClose()}>
+              Home
+            </HashLink>
+          </li>
 
-        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          <HashLink to="/#portfolio" onClick={() => handleClose()}>
-            Portfolio
-          </HashLink>
-        </li>
-        <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
-          <Link to="/contact" onClick={() => handleClose()}>
-            Contact
-          </Link>
-        </li>
-      </ul>
+          <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
+            <HashLink to="/#portfolio" onClick={() => handleClose()}>
+              Portfolio
+            </HashLink>
+          </li>
+          <li className={open ? 'nav-link nav-link-visible' : 'nav-link'}>
+            <Link to="/contact" onClick={() => handleClose()}>
+              Contact
+            </Link>
+          </li>
+        </ul>
 
-      <div className="social-icons">
-        <a
-          href="https://www.linkedin.com/in/eosullivan9/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <IconContext.Provider
-            value={{ style: { fontSize: '1.5rem' }, color: '#072ac8' }}
+        <div className="social-icons">
+          <a
+            href="https://www.linkedin.com/in/eosullivan9/"
+            target="_blank"
+            rel="noreferrer"
           >
             <SiLinkedin />
-          </IconContext.Provider>
-        </a>
+          </a>
 
-        <a
-          href="https://github.com/eosullivan92"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <IconContext.Provider
-            value={{ style: { fontSize: '1.5rem' }, color: '#072ac8' }}
+          <a
+            href="https://github.com/eosullivan92"
+            target="_blank"
+            rel="noreferrer"
           >
             <SiGithub />
-          </IconContext.Provider>
-        </a>
-      </div>
+          </a>
+        </div>
+      </IconContext.Provider>
     </div>
   )
 }
