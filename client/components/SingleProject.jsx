@@ -83,6 +83,7 @@ export default function SingleProject() {
                   src={project.screenshotmobile || project.screenshot}
                   alt="project screenshot"
                   decoding="async"
+                  loading="lazy"
                   className={
                     id == 4 ? 'project-image plantasia-img' : 'project-image'
                   }

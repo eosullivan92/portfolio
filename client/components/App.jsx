@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { useSessionStorage } from '../hooks/useSessionStorage'
 import Header from './Header'
 import AboutMe from './AboutMe'
 import Projects from './Projects'
@@ -10,18 +9,13 @@ import SingleProject from './SingleProject'
 
 function App() {
   const [open, setOpen] = useState(false)
-  const [firstLoad, setFirstLoad] = useSessionStorage('firstLoad', true)
 
   const handleSidebar = () => {
     setOpen((prev) => !prev)
   }
 
-  useEffect(() => {
-    setFirstLoad(false)
-  }, [])
-
   return (
-    <div className={firstLoad ? `container fade` : `container`}>
+    <div className={`container`}>
       <Sidebar open={open} handleSidebar={handleSidebar} />
       <div className={open ? 'content content-pushed' : 'content'}>
         <Header open={open} handleSidebar={handleSidebar} />
